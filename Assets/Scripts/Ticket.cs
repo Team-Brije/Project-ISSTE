@@ -9,14 +9,14 @@ public class Ticket : MonoBehaviour
     public List<int> possibleMonths = new List<int>();
     public List<int> possibleYears = new List<int>();
 
-    GameManager manager;
+    DataManager manager;
 
     public bool isTicketCorrrect; 
     
     // Start is called before the first frame update
     void OnEnable()
     {
-        manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        manager = DataManager.Instance;
         InitializeValues();
         AddWeight();
         GetDateAndCheck();
@@ -119,11 +119,5 @@ public class Ticket : MonoBehaviour
             Debug.Log("This Ticket would be incorrect");
             isTicketCorrrect = false;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

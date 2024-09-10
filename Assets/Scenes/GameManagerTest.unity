@@ -9119,7 +9119,7 @@ GameObject:
   - component: {fileID: 1963074241}
   - component: {fileID: 1963074240}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: DataManager
   m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
