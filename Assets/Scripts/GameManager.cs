@@ -11,18 +11,31 @@ public class GameManager : MonoBehaviour
 
     [Header("Ticket Difficulty Variables")]
 
-    public int dayNumbers;
-    public int monthNumbers;
-    public int yearNumbers;
+    public int poolSize;
     public int DayPercentage, MonthPercentage, YearPercentage;
-    public int minimumDayValue, maximumDayValue;
-    public int minimumMonthValue, maximumMonthValue;
-    public int minimumYearValue, maximumYearValue;
+    public int dayRange;
+    public int monthRange;
+    public int yearRange;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        DayPercentage = DayPercentage + 30;
+        MonthPercentage = MonthPercentage + 30;
+        YearPercentage = YearPercentage + 30;
+
+        if (DayPercentage > 100)
+        {
+            DayPercentage -= 30;
+        }
+        if (MonthPercentage > 100)
+        {
+            MonthPercentage -= 30;
+        }
+        if (YearPercentage > 100)
+        {
+            YearPercentage -= 30;
+        }
     }
     
     public static void CheckTicket()
