@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620a315ca6b582d45a0128fd3407b9d4, type: 3}
+  m_Name: Octopussy
+  m_EditorClassIdentifier: 
+  AlienType:
+  - Human
+  - UWU
+  - Automaton
+  AlienName:
+  - Sam
+  - Carlos
+  - John
+  - Cesar
+  - Sigma
+  - Roberto
+  - Diego
+  - Rigoberto
+  - Hector
+  - Travis
+  - Bryan
+  - Uitrenm
+  - Kolohg
+  - Cupsoot
+  - Amii
+  - Prurigo
+  - Insipitur
+  - Enos
+  - Veto
+  - Wompomp
+  - Knopf
+  - Angetmo
+  - Biro
+  - Brosmitoo
+  - Alporoeg
+  - Elnora
+  - acheen
+  - Alfonso
+  - Abo
+  - Shalne
+  Origin:
+  - Terra
+  - Neptune
+  - TON-618
+  Model:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
