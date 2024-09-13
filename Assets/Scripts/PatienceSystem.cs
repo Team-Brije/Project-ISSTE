@@ -11,6 +11,7 @@ public class PatienceSystem : MonoBehaviour
     public float maxWait;
     public float minWait;
     [SerializeField] private int position;
+    private bool gotToStall = false;
 
     private void Start()
     {
@@ -22,6 +23,12 @@ public class PatienceSystem : MonoBehaviour
     void Update()
     {
         position = queue.IndexOf(gameObject);
+        if (position == 0 && !gotToStall)
+        {
+            waitSecs = 0;
+            waitTime = UnityEngine.Random.Range(minWait, maxWait);
+            gotToStall=true;
+        }
         waitSecs += Time.deltaTime;
         if (waitSecs >= waitTime) 
         {

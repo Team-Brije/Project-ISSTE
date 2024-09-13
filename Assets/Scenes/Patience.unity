@@ -565,8 +565,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitSecs: 0
   waitTime: 0
-  maxWait: 30
-  minWait: 20
+  maxWait: 20
+  minWait: 10
   position: 0
 --- !u!136 &377470188
 CapsuleCollider:
@@ -970,8 +970,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitSecs: 0
   waitTime: 0
-  maxWait: 20
-  minWait: 10
+  maxWait: 30
+  minWait: 20
   position: 0
 --- !u!136 &1216726959
 CapsuleCollider:
