@@ -9147,6 +9147,8 @@ MonoBehaviour:
   dayRange: 15
   monthRange: 5
   yearRange: 50
+  Hotels: 
+  dayConfigFile: {fileID: 11400000, guid: 8279f58c181ba6945a401e879ac1eaf7, type: 2}
 --- !u!4 &1963074241
 Transform:
   m_ObjectHideFlags: 0

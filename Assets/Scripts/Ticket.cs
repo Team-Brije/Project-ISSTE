@@ -20,6 +20,10 @@ public class Ticket : MonoBehaviour
         InitializeValues();
         AddWeight();
         GetDateAndCheck();
+        foreach (bool i in manager.Hotels)
+        {
+            Debug.Log(i);
+        }
     }
 
 

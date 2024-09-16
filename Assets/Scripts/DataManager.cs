@@ -6,18 +6,21 @@ using UnityEngine;
 public class DataManager : MonoBehaviour
 {
     [Header("Date Variables")]
-    public int day;
-    public int month;
-    public int year;
+    [HideInInspector] public int day;
+    [HideInInspector] public int month;
+    [HideInInspector] public int year;
 
     [Header("Ticket Difficulty Variables")]
 
-    public int poolSize;
-    public int DayPercentage, MonthPercentage, YearPercentage;
-    public int dayRange;
-    public int monthRange;
-    public int yearRange;
+    [HideInInspector] public int poolSize;
+    [HideInInspector] public int DayPercentage, MonthPercentage, YearPercentage;
+    [HideInInspector] public int dayRange;
+    [HideInInspector] public int monthRange;
+    [HideInInspector] public int yearRange;
+    [HideInInspector] public List<bool> Hotels = new List<bool>();
 
+
+    public DayConfig dayConfigFile;
 
     private static DataManager instance;
 
@@ -48,6 +51,8 @@ public class DataManager : MonoBehaviour
             //DontDestroyOnLoad(gameObject);
         }
 
+        SetValues();
+
         DayPercentage = DayPercentage + 30;
         MonthPercentage = MonthPercentage + 30;
         YearPercentage = YearPercentage + 30;
@@ -66,9 +71,24 @@ public class DataManager : MonoBehaviour
         }
     }
     
-    public static void CheckTicket()
+    public void SetValues()
     {
+        day = dayConfigFile.day;
+        month = dayConfigFile.month;
+        year = dayConfigFile.year;
 
+        poolSize = dayConfigFile.poolSize;
+        DayPercentage = dayConfigFile.DayPercentage;
+        MonthPercentage = dayConfigFile.MonthPercentage;
+        YearPercentage = dayConfigFile.YearPercentage;
+        dayRange = dayConfigFile.dayRange;
+        monthRange = dayConfigFile.monthRange;
+        yearRange = dayConfigFile.yearRange;
+
+        Hotels.Add(dayConfigFile.Hotel1);
+        Hotels.Add(dayConfigFile.Hotel2);
+        Hotels.Add(dayConfigFile.Hotel3);
+        Hotels.Add(dayConfigFile.Hotel4);
     }
 
     // Update is called once per frame
