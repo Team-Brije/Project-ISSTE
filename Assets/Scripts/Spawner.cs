@@ -9,6 +9,8 @@ public class Spawner : MonoBehaviour
     public float timerset;
     public int Alienlimit;
     private bool Spawneractive = true;
+    public GameObject Alienmodel;
+    public Transform spawner;
    
     void Update()
     {
@@ -33,7 +35,7 @@ public class Spawner : MonoBehaviour
     }
     public void spawnalien()
     {
-        Debug.Log("Alien spawned");
+        Instantiate(Alienmodel, spawner);
         Alienlimit++;
         
     }
