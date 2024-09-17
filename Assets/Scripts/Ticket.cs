@@ -1,5 +1,6 @@
 
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Ticket : MonoBehaviour
@@ -11,7 +12,13 @@ public class Ticket : MonoBehaviour
 
     DataManager manager;
 
-    public bool isTicketCorrrect; 
+    public bool isTicketCorrrect;
+
+    public TextMeshPro dayText;
+    public TextMeshPro monthText;
+    public TextMeshPro yearText;
+
+    int day, month, year;
     
     // Start is called before the first frame update
     void OnEnable()
@@ -20,10 +27,7 @@ public class Ticket : MonoBehaviour
         InitializeValues();
         AddWeight();
         GetDateAndCheck();
-        foreach (bool i in manager.Hotels)
-        {
-            Debug.Log(i);
-        }
+        DisplayData();
     }
 
 
@@ -103,10 +107,6 @@ public class Ticket : MonoBehaviour
 
     void GetDateAndCheck()
     {
-        int day;
-        int month;
-        int year;
-
         day = possibleDates[Random.Range(0,possibleDates.Count)];
         month = possibleMonths[Random.Range(0, possibleMonths.Count)];
         year = possibleYears[Random.Range(0, possibleYears.Count)];
@@ -123,5 +123,12 @@ public class Ticket : MonoBehaviour
             Debug.Log("This Ticket would be incorrect");
             isTicketCorrrect = false;
         }
+    }
+
+    void DisplayData()
+    {
+        dayText.text = day.ToString();
+        monthText.text = month.ToString();
+        yearText.text = year.ToString();
     }
 }

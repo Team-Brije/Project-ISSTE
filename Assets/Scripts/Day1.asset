@@ -20,9 +20,9 @@ MonoBehaviour:
   Hotel3: 1
   Hotel4: 0
   poolSize: 100
-  DayPercentage: 90
-  MonthPercentage: 90
-  YearPercentage: 90
+  DayPercentage: 40
+  MonthPercentage: 40
+  YearPercentage: 40
   dayRange: 10
   monthRange: 5
   yearRange: 50
