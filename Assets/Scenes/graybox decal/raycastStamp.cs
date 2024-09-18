@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class raycastStamp : MonoBehaviour
 {
-    public static event Action<bool> OnInteract;
+    public static event Action<bool,bool> OnInteract;
 
     public GameObject decalxd;
     public float distanceRay;
