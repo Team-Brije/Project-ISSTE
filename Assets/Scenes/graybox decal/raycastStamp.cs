@@ -10,7 +10,7 @@ public class raycastStamp : MonoBehaviour
     public GameObject decalxd;
     public float distanceRay;
     public GameObject selloxd;
-    Vector3 rxd;
+    public bool StampAproved;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +45,7 @@ public class raycastStamp : MonoBehaviour
             //if (hitinfo.transform.gameObject.CompareTag("")) ;
             Debug.Log(hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect);
             bool ticketstatus = hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect;
-            OnInteract?.Invoke(ticketstatus);
+            OnInteract?.Invoke(ticketstatus,StampAproved);
         }
         else
         {
