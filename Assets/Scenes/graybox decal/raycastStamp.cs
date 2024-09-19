@@ -42,7 +42,7 @@ public class raycastStamp : MonoBehaviour
             decalxd.transform.position = hitinfo.point;
             decalxd.transform.rotation = selloxd.transform.rotation;
             decalxd.transform.parent = hitinfo.transform;
-            //hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect;
+            ///hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect;
             //Debug.Log(hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect);
             if (hitinfo.transform.gameObject.CompareTag("Ticket"))
             {
