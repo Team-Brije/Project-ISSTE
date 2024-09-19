@@ -11,22 +11,34 @@ public class AlienMOVEMENT : MonoBehaviour
     public Vector3 booth;
     public Vector3 Alien;
     public GameObject boothObj;
+    public static bool canMove = true; 
+    public float speed = 10f;
+    private Rigidbody rb;
 
- 
+
     void Start()
     {
         boothObj = GameObject.Find("SpawnLeft");
         newPosition = boothObj.transform.position;
         Alien = transform.position;
-       
+        rb = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        time += Time.deltaTime;
-        float percentage = time / duration;
-        transform.position = Vector3.Lerp(Alien, newPosition , percentage);
+        if (canMove)
+        {
+            time += Time.deltaTime;
+            float percentage = time / duration;
+            Vector3 newPosition = rb.position + Vector3.right * speed * Time.fixedDeltaTime;
+            // Move the box to the new position
+            this.rb.MovePosition(newPosition);
+        }
+            
+        
+
     }
-   
+
 }
