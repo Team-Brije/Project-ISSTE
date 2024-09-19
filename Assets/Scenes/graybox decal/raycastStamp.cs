@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class raycastStamp : MonoBehaviour
 {
-    public static event Action<bool,bool> OnInteract;
+    public static event Action<bool,bool,bool> OnInteract;
 
     public GameObject decalxd;
     public float distanceRay;
@@ -45,7 +45,9 @@ public class raycastStamp : MonoBehaviour
             //if (hitinfo.transform.gameObject.CompareTag("")) ;
             Debug.Log(hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect);
             bool ticketstatus = hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect;
-            OnInteract?.Invoke(ticketstatus,StampAproved);
+            bool ticketcheck = hitinfo.transform.gameObject.GetComponent<Ticket>().hasTicketBeenChecked;
+            OnInteract?.Invoke(ticketstatus,StampAproved,ticketcheck);
+            hitinfo.transform.gameObject.GetComponent<Ticket>().hasTicketBeenChecked = true;
         }
         else
         {

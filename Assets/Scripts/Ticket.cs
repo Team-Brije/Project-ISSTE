@@ -13,6 +13,8 @@ public class Ticket : MonoBehaviour
     DataManager manager;
 
     public bool isTicketCorrrect;
+    public bool hasTicketBeenChecked;
+
 
     public TextMeshPro dayText;
     public TextMeshPro monthText;
@@ -36,6 +38,7 @@ public class Ticket : MonoBehaviour
         possibleDates.Clear();
         possibleMonths.Clear();
         possibleYears.Clear();
+        hasTicketBeenChecked = false;
 
         for (int day = 0; day < manager.poolSize;  day++)
         {
