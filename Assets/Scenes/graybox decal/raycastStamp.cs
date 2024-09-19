@@ -37,21 +37,25 @@ public class raycastStamp : MonoBehaviour
     public void activarSello(){
         if(Physics.Raycast(transform.position,transform.TransformDirection(Vector3.forward), out RaycastHit hitinfo, distanceRay))
         {
-            Debug.Log("hay: "+hitinfo);
+            //Debug.Log("hay: "+hitinfo);
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitinfo.distance, Color.red);
             decalxd.transform.position = hitinfo.point;
             decalxd.transform.rotation = selloxd.transform.rotation;
+            decalxd.transform.parent = hitinfo.transform;
             //hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect;
-            //if (hitinfo.transform.gameObject.CompareTag("")) ;
-            Debug.Log(hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect);
-            bool ticketstatus = hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect;
-            bool ticketcheck = hitinfo.transform.gameObject.GetComponent<Ticket>().hasTicketBeenChecked;
-            OnInteract?.Invoke(ticketstatus,StampAproved,ticketcheck);
-            hitinfo.transform.gameObject.GetComponent<Ticket>().hasTicketBeenChecked = true;
+            //Debug.Log(hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect);
+            if (hitinfo.transform.gameObject.CompareTag("Ticket"))
+            {
+                bool ticketstatus = hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect;
+                bool ticketcheck = hitinfo.transform.gameObject.GetComponent<Ticket>().hasTicketBeenChecked;
+                OnInteract?.Invoke(ticketstatus, StampAproved, ticketcheck);
+                hitinfo.transform.gameObject.GetComponent<Ticket>().hasTicketBeenChecked = true;
+            }
         }
         else
         {
-            Debug.Log("no hay na: " + hitinfo.transform); Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitinfo.distance, Color.blue);
+            //Debug.Log("no hay na: " + hitinfo.transform);
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitinfo.distance, Color.blue);
         }
 
         
