@@ -1,4 +1,5 @@
 
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -30,6 +31,7 @@ public class Ticket : MonoBehaviour
         AddWeight();
         GetDateAndCheck();
         DisplayData();
+        StartCoroutine(resetRigi());
     }
 
 
@@ -133,5 +135,11 @@ public class Ticket : MonoBehaviour
         dayText.text = day.ToString();
         monthText.text = month.ToString();
         yearText.text = year.ToString();
+    }
+
+    public IEnumerator resetRigi(){
+        gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        yield return new WaitForSeconds(0.1f);
+        gameObject.GetComponent<Rigidbody>().isKinematic = false;
     }
 }

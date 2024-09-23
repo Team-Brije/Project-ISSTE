@@ -1426,6 +1426,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   queue: {fileID: 1344984536}
+  decalno: {fileID: 986272310}
+  decalsi: {fileID: 1503991545}
 --- !u!65 &537550289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2796,7 +2798,7 @@ GameObject:
   - component: {fileID: 1503991545}
   - component: {fileID: 1503991544}
   m_Layer: 0
-  m_Name: Decal Projector
+  m_Name: DecalSI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

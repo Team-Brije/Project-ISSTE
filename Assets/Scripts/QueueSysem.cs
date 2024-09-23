@@ -11,20 +11,25 @@ public class QueueSysem : MonoBehaviour
     public Transform initialpos;
 
     BoxCollider BoxCollider;
+    bool tpticket=true;
 
     private void Start()
     {
         initialpos = transform;
         BoxCollider = GetComponent<BoxCollider>();
+        tpticket=true;
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Alien"))
         {
-            AlienMOVEMENT.canMove = false;
-            Ticket.SetActive(true);
+            AlienMOVEMENT.canMove = false;   
+            if(tpticket){
             Ticket.transform.position = Ticketpos.transform.position;  
+            tpticket=false;
+            Ticket.SetActive(true);
+            }
             print("uwu");
         }
     }
@@ -33,6 +38,7 @@ public class QueueSysem : MonoBehaviour
         if (other.CompareTag("Alien"))
         {
             AlienMOVEMENT.canMove = true;
+            tpticket = true;
             //colliders.SetActive(false);
             print("uwu");
         }
