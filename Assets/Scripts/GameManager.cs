@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,14 +38,15 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
-
-        raycastStamp.OnInteract += HandleTicket;
+        Debug.Log("arribadelobeserver");
+        TicketReset.OnInteract += HandleTicket;
     }
 
 
     void HandleTicket(bool isTicketCorrect, bool isApprovedStamp, bool hasBeenChecked)
     {
-        if(hasBeenChecked)
+        Debug.Log(isTicketCorrect + " " + isApprovedStamp + " " + hasBeenChecked);
+        if(!hasBeenChecked)
         {
             return;
         }
@@ -74,18 +76,9 @@ public class GameManager : MonoBehaviour
         lives--;
         if (lives == 0)
         {
+            SceneManager.LoadScene("BLACK");
             Debug.Log("Game Over");
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

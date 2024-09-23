@@ -40,7 +40,6 @@ public class QueueSysem : MonoBehaviour
             AlienMOVEMENT.canMove = true;
             tpticket = true;
             //colliders.SetActive(false);
-            print("uwu");
         }
     }
 

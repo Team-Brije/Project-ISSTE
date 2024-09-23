@@ -15,7 +15,7 @@ public class Ticket : MonoBehaviour
 
     public bool isTicketCorrrect;
     public bool hasTicketBeenChecked;
-
+    public bool lastStampUsed;
 
     public TextMeshPro dayText;
     public TextMeshPro monthText;

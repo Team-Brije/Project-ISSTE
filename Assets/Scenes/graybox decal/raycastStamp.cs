@@ -11,12 +11,13 @@ public class raycastStamp : MonoBehaviour
     public float distanceRay;
     public GameObject selloxd;
     public bool StampAproved;
+    public bool tieneTinta;
 
     public GameObject TicketBucket;
     // Start is called before the first frame update
     void Start()
     {
-        
+        tieneTinta = false;
     }
 
     // Update is called once per frame
@@ -34,25 +35,43 @@ public class raycastStamp : MonoBehaviour
         {
             Debug.Log("no hay na: " + hitinfo.transform); Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitinfo.distance, Color.blue);
         }*/
+        Debug.Log("tienetinta " + tieneTinta);
+        if (tieneTinta)
+        {
+            activarSello();
+        }
     }
 
     public void activarSello(){
-        if(Physics.Raycast(transform.position,transform.TransformDirection(Vector3.forward), out RaycastHit hitinfo, distanceRay))
+        if(Physics.Raycast(transform.position,transform.TransformDirection(Vector3.down), out RaycastHit hitinfo, distanceRay))
         {
-            //Debug.Log("hay: "+hitinfo);
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitinfo.distance, Color.red);
-            decalxd.transform.position = hitinfo.point;
-            decalxd.transform.rotation = selloxd.transform.rotation;
-            decalxd.transform.parent = hitinfo.transform;
-            ///hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect;
-            //Debug.Log(hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect);
-            if (hitinfo.transform.gameObject.CompareTag("Ticket"))
+            if (!(hitinfo.transform.gameObject.CompareTag("TintaSello")))
             {
-                bool ticketstatus = hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect;
-                bool ticketcheck = hitinfo.transform.gameObject.GetComponent<Ticket>().hasTicketBeenChecked;
-                OnInteract?.Invoke(ticketstatus, StampAproved, ticketcheck);
-                hitinfo.transform.gameObject.GetComponent<Ticket>().hasTicketBeenChecked = true;
-                TicketBucket.SetActive(true);
+
+                //Debug.Log("hay: "+hitinfo);
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * hitinfo.distance, Color.red);
+                decalxd.transform.position = hitinfo.point;
+                decalxd.transform.rotation = selloxd.transform.rotation;
+                decalxd.transform.parent = hitinfo.transform;
+                ///hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect;
+                //Debug.Log(hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect);
+                if (hitinfo.transform.gameObject.CompareTag("Ticket"))
+                {
+                    //bool ticketstatus = hitinfo.transform.gameObject.GetComponent<Ticket>().isTicketCorrrect;
+                    //bool ticketcheck = hitinfo.transform.gameObject.GetComponent<Ticket>().hasTicketBeenChecked;
+                    //OnInteract?.Invoke(ticketstatus, StampAproved, ticketcheck);
+
+                    bool ticketcheck = hitinfo.transform.gameObject.GetComponent<Ticket>().hasTicketBeenChecked;
+
+                    if (!ticketcheck)
+                    {
+                        hitinfo.transform.gameObject.GetComponent<Ticket>().lastStampUsed = StampAproved;
+                        hitinfo.transform.gameObject.GetComponent<Ticket>().hasTicketBeenChecked = true;
+                        TicketBucket.SetActive(true);
+                    }
+
+                }
+                tieneTinta = false;
             }
         }
         else
