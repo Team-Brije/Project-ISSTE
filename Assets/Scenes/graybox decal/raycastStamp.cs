@@ -11,6 +11,8 @@ public class raycastStamp : MonoBehaviour
     public float distanceRay;
     public GameObject selloxd;
     public bool StampAproved;
+
+    public GameObject TicketBucket;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +52,7 @@ public class raycastStamp : MonoBehaviour
                 bool ticketcheck = hitinfo.transform.gameObject.GetComponent<Ticket>().hasTicketBeenChecked;
                 OnInteract?.Invoke(ticketstatus, StampAproved, ticketcheck);
                 hitinfo.transform.gameObject.GetComponent<Ticket>().hasTicketBeenChecked = true;
+                TicketBucket.SetActive(true);
             }
         }
         else

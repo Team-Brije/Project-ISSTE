@@ -32,7 +32,7 @@ public class AlienMOVEMENT : MonoBehaviour
         {
             time += Time.deltaTime;
             float percentage = time / duration;
-            Vector3 newPosition = rb.position + Vector3.right * speed * Time.fixedDeltaTime;
+            Vector3 newPosition = rb.position + Vector3.left * speed * Time.fixedDeltaTime;
             // Move the box to the new position
             this.rb.MovePosition(newPosition);
         }
