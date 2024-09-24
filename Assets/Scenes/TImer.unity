@@ -216,7 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Temporizador: {fileID: 518435507}
   boton: {fileID: 1407168336}
-  PlayButton: {fileID: 0}
+  PlayButton: {fileID: 270043824}
 --- !u!1 &270043824
 GameObject:
   m_ObjectHideFlags: 0
