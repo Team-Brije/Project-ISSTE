@@ -14,6 +14,8 @@ public class TimeManager : MonoBehaviour
     private static   int begTime = 5 ;
     private int extraTime = 5;
 
+    private bool playPressed = false;
+
     //Variables For Ui
     public TextMeshProUGUI Temporizador;
     public GameObject boton;
@@ -33,27 +35,33 @@ public class TimeManager : MonoBehaviour
         }
         Temporizador.text = timer.ToString();
         Debug.Log(begTime);
-        
+
+        TimerCountdown();
+
     }
 
     public void TimerCountdown()
     {
-        timer--;
-        Temporizador.text = timer.ToString();
-
-        PlayButton.SetActive(false);
-
-        if (timer != 0)
+        if (playPressed == true)
         {
-            InvokeRepeating(nameof(TimerCountdown), 1, 1);
-        }
-        else
-        {
-            Debug.Log("Se acabo el dia");
-            //timer = timer + extraTime;
-            boton.SetActive(true);
-            Day++;
-            //SceneManager.LoadScene("Timer");
+            timer--;
+            Temporizador.text = timer.ToString();
+
+
+
+            if (timer != 0)
+            {
+                Invoke(nameof(TimerCountdown), 1);
+            }
+            else
+            {
+                Debug.Log("Se acabo el dia");
+                //timer = timer + extraTime;
+                boton.SetActive(true);
+                Day++;
+                //SceneManager.LoadScene("Timer");
+
+            }
 
         }
 
@@ -68,6 +76,7 @@ public class TimeManager : MonoBehaviour
 
     public void Play()
     {
-        TimerCountdown();
+        PlayButton.SetActive(false);
+        playPressed = true;
     }
 }
