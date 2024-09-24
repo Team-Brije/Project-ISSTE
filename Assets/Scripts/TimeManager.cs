@@ -31,7 +31,7 @@ public class TimeManager : MonoBehaviour
             begTime = begTime + extraTime;
             timer = begTime;
         }
-        
+        Temporizador.text = timer.ToString();
         Debug.Log(begTime);
         
     }
