@@ -36,7 +36,7 @@ public class TimeManager : MonoBehaviour
         Temporizador.text = timer.ToString();
         Debug.Log(begTime);
 
-        TimerCountdown();
+        ();
 
     }
 
@@ -63,6 +63,9 @@ public class TimeManager : MonoBehaviour
 
             }
 
+        } else
+        {
+            TimerCountdown();
         }
 
 
