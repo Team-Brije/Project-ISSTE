@@ -65,7 +65,7 @@ public class TimeManager : MonoBehaviour
 
         } else
         {
-            TimerCountdown();
+            Invoke(nameof(TimerCountdown), 1);
         }
 
 
