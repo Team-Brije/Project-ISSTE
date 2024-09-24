@@ -45,7 +45,7 @@ public class TimeManager : MonoBehaviour
 
         if (timer != 0)
         {
-            Invoke(nameof(TimerCountdown), 1);
+            InvokeRepeating(nameof(TimerCountdown), 1, 1);
         }
         else
         {
