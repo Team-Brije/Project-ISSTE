@@ -167,14 +167,156 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
+--- !u!1 &27508772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 27508773}
+  - component: {fileID: 27508776}
+  - component: {fileID: 27508775}
+  - component: {fileID: 27508774}
+  m_Layer: 0
+  m_Name: Reservation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &27508773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27508772}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1677655853}
+  - {fileID: 130612030}
+  - {fileID: 39579575}
+  m_Father: {fileID: 1769661923}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &27508774
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27508772}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0846034, y: 0.049596883, z: 1.461618}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &27508775
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27508772}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &27508776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27508772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ff97ad0a8ff9b42b7452eac63022f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleDates: 
+  possibleMonths: 
+  possibleYears: 
+  isResCorrrect: 0
+  dayText: {fileID: 2113610656}
+  monthText: {fileID: 1133546493}
+  yearText: {fileID: 2042117875}
+  hotelText: {fileID: 637224077}
+--- !u!1 &39579574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 39579575}
+  m_Layer: 0
+  m_Name: Important Texts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &39579575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39579574}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.06100011, y: 0.017, z: -0.141}
+  m_LocalScale: {x: 0.54922, y: 0.54922, z: 0.54922}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2113610655}
+  - {fileID: 1133546492}
+  - {fileID: 2042117874}
+  - {fileID: 637224076}
+  m_Father: {fileID: 27508773}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &48676827
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,11 +361,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -271,11 +415,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -323,14 +469,187 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
+--- !u!1 &77386875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 77386876}
+  - component: {fileID: 77386878}
+  - component: {fileID: 77386877}
+  m_Layer: 0
+  m_Name: Day (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &77386876
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77386875}
+  m_LocalRotation: {x: 0.7071067, y: -0, z: -0, w: 0.70710695}
+  m_LocalPosition: {x: 0, y: 0, z: 0.75}
+  m_LocalScale: {x: 0.04049785, y: 0.040497847, z: 0.040497847}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 130612030}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.101, y: 0.01}
+  m_SizeDelta: {x: 36.1735, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &77386877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77386875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: RESERVATION
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 77386878}
+  m_maskType: 0
+--- !u!23 &77386878
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77386875}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &87044010
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,11 +694,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -427,11 +748,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -479,11 +802,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -531,11 +856,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -583,11 +910,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -635,14 +964,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
+--- !u!1 &130612029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 130612030}
+  m_Layer: 0
+  m_Name: Non-Important Texts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &130612030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130612029}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.061, y: 0.017, z: 0.074}
+  m_LocalScale: {x: 0.54922, y: 0.54922, z: 0.54922}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1583324053}
+  - {fileID: 77386876}
+  - {fileID: 1499965119}
+  - {fileID: 2099547480}
+  - {fileID: 975967931}
+  m_Father: {fileID: 27508773}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &179838689
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,11 +1054,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -970,11 +1339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1022,11 +1393,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1074,11 +1447,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1126,11 +1501,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1178,11 +1555,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1230,11 +1609,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1282,11 +1663,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1334,11 +1717,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1386,11 +1771,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1438,11 +1825,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1490,11 +1879,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1542,11 +1933,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1594,11 +1987,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1646,11 +2041,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1698,11 +2095,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1750,11 +2149,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1802,11 +2203,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1854,11 +2257,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1906,11 +2311,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -1958,11 +2365,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2010,11 +2419,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2062,11 +2473,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2114,11 +2527,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2166,11 +2581,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2218,11 +2635,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2270,11 +2689,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2322,11 +2743,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2374,11 +2797,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2426,11 +2851,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2478,14 +2905,187 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
+--- !u!1 &637224075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 637224076}
+  - component: {fileID: 637224078}
+  - component: {fileID: 637224077}
+  m_Layer: 0
+  m_Name: Hotel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &637224076
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637224075}
+  m_LocalRotation: {x: 0.7071067, y: -0, z: -0, w: 0.70710695}
+  m_LocalPosition: {x: 0, y: 0, z: -0.586}
+  m_LocalScale: {x: 0.04049785, y: 0.040497847, z: 0.040497847}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 39579575}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.087, y: 0.01}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &637224077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637224075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: HOTEL 1
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 637224078}
+  m_maskType: 0
+--- !u!23 &637224078
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637224075}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &640582708
 GameObject:
   m_ObjectHideFlags: 0
@@ -2530,11 +3130,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2582,11 +3184,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2634,11 +3238,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2686,11 +3292,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2738,11 +3346,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2790,11 +3400,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2842,11 +3454,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2894,11 +3508,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2946,11 +3562,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -2998,11 +3616,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3050,11 +3670,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3102,11 +3724,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3154,11 +3778,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3206,11 +3832,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3258,11 +3886,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3310,11 +3940,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3362,11 +3994,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3414,11 +4048,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3466,11 +4102,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3518,11 +4156,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3570,11 +4210,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3622,11 +4264,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3674,11 +4318,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3726,11 +4372,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3778,11 +4426,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3830,11 +4480,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3882,11 +4534,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3934,11 +4588,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -3986,11 +4642,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4038,11 +4696,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4090,11 +4750,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4142,14 +4804,187 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
+--- !u!1 &975967930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 975967931}
+  - component: {fileID: 975967933}
+  - component: {fileID: 975967932}
+  m_Layer: 0
+  m_Name: Year
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &975967931
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975967930}
+  m_LocalRotation: {x: 0.7071067, y: -0, z: -0, w: 0.70710695}
+  m_LocalPosition: {x: 0, y: 0, z: 0.143}
+  m_LocalScale: {x: 0.04049785, y: 0.040497847, z: 0.040497847}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 130612030}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.614, y: 0.01}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &975967932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975967930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Year
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 975967933}
+  m_maskType: 0
+--- !u!23 &975967933
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975967930}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &980848007
 GameObject:
   m_ObjectHideFlags: 0
@@ -4194,11 +5029,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4246,11 +5083,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4298,11 +5137,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4350,11 +5191,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4402,11 +5245,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4454,11 +5299,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4506,11 +5353,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4558,11 +5407,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4610,11 +5461,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4662,11 +5515,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4714,11 +5569,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4766,11 +5623,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4818,11 +5677,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4870,11 +5731,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4922,11 +5785,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -4974,11 +5839,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5026,14 +5893,187 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
+--- !u!1 &1133546491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1133546492}
+  - component: {fileID: 1133546494}
+  - component: {fileID: 1133546493}
+  m_Layer: 0
+  m_Name: Month
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1133546492
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133546491}
+  m_LocalRotation: {x: 0.7071067, y: -0, z: -0, w: 0.70710695}
+  m_LocalPosition: {x: 0, y: 0, z: 0.143}
+  m_LocalScale: {x: 0.04049785, y: 0.040497847, z: 0.040497847}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 39579575}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.048, y: 0.01}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1133546493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133546491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1133546494}
+  m_maskType: 0
+--- !u!23 &1133546494
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133546491}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1136920442
 GameObject:
   m_ObjectHideFlags: 0
@@ -5078,11 +6118,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5130,11 +6172,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5182,11 +6226,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5234,11 +6280,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5286,11 +6334,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5338,11 +6388,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5390,11 +6442,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5442,11 +6496,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5494,11 +6550,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5546,11 +6604,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5598,11 +6658,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5650,11 +6712,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5702,11 +6766,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5754,11 +6820,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5806,11 +6874,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5858,11 +6928,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5910,11 +6982,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -5962,11 +7036,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6014,11 +7090,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6066,11 +7144,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6118,11 +7198,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6170,11 +7252,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6222,14 +7306,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
+--- !u!4 &1332848574 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 109305999269101235, guid: 9575e26ded7cada41a64009ee388ea67, type: 3}
+  m_PrefabInstance: {fileID: 7779237815875583085}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1341709791
 GameObject:
   m_ObjectHideFlags: 0
@@ -6274,11 +7365,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6326,11 +7419,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6378,11 +7473,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6430,11 +7527,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6482,11 +7581,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6534,11 +7635,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6586,11 +7689,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6638,11 +7743,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6690,11 +7797,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6742,11 +7851,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6794,11 +7905,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6846,11 +7959,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6898,11 +8013,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -6950,14 +8067,187 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
+--- !u!1 &1499965118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1499965119}
+  - component: {fileID: 1499965121}
+  - component: {fileID: 1499965120}
+  m_Layer: 0
+  m_Name: Day (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1499965119
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499965118}
+  m_LocalRotation: {x: 0.7071067, y: -0, z: -0, w: 0.70710695}
+  m_LocalPosition: {x: 0, y: 0, z: -0.676}
+  m_LocalScale: {x: 0.04049785, y: 0.040497847, z: 0.040497847}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 130612030}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.101, y: 0.01}
+  m_SizeDelta: {x: 36.1735, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1499965120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499965118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: HOTEL
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1499965121}
+  m_maskType: 0
+--- !u!23 &1499965121
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499965118}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1502529297
 GameObject:
   m_ObjectHideFlags: 0
@@ -7033,11 +8323,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -7085,11 +8377,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -7137,11 +8431,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -7189,14 +8485,187 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
+--- !u!1 &1583324052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1583324053}
+  - component: {fileID: 1583324055}
+  - component: {fileID: 1583324054}
+  m_Layer: 0
+  m_Name: Day
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1583324053
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583324052}
+  m_LocalRotation: {x: 0.7071067, y: -0, z: -0, w: 0.70710695}
+  m_LocalPosition: {x: 0, y: 0, z: 0.143}
+  m_LocalScale: {x: 0.04049785, y: 0.040497847, z: 0.040497847}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 130612030}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.786, y: 0.01}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1583324054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583324052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Day
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1583324055}
+  m_maskType: 0
+--- !u!23 &1583324055
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583324052}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1586751749
 GameObject:
   m_ObjectHideFlags: 0
@@ -7241,11 +8710,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -7293,11 +8764,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -7345,11 +8818,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -7397,11 +8872,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -7449,11 +8926,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -7501,11 +8980,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -7553,11 +9034,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -7605,11 +9088,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -7657,11 +9142,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -7709,14 +9196,99 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
+--- !u!1 &1677655852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1677655853}
+  - component: {fileID: 1677655855}
+  - component: {fileID: 1677655854}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1677655853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677655852}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0725387, y: 0.039305, z: 1.4491}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 27508773}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1677655854
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677655852}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1677655855
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677655852}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1691350940
 GameObject:
   m_ObjectHideFlags: 0
@@ -7761,11 +9333,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -7918,11 +9492,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -7970,11 +9546,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8022,11 +9600,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8074,11 +9654,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8126,11 +9708,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8178,11 +9762,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8230,11 +9816,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8282,11 +9870,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8334,11 +9924,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8386,11 +9978,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8438,14 +10032,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
+--- !u!1 &1769661922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1769661923}
+  m_Layer: 0
+  m_Name: ObjectHolders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1769661923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769661922}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1332848574}
+  - {fileID: 27508773}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1782532903
 GameObject:
   m_ObjectHideFlags: 0
@@ -8490,11 +10119,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8542,11 +10173,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8686,11 +10319,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8738,11 +10373,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8790,11 +10427,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8842,11 +10481,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8894,11 +10535,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8946,11 +10589,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -8998,11 +10643,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9050,11 +10697,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9102,11 +10751,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9154,11 +10805,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9206,11 +10859,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9258,11 +10913,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9310,11 +10967,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9480,11 +11139,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9532,11 +11193,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9584,11 +11247,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9636,11 +11301,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9688,11 +11355,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9740,11 +11409,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9792,11 +11463,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9844,11 +11517,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9896,11 +11571,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -9948,11 +11625,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10000,11 +11679,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10052,11 +11733,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10104,11 +11787,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10156,11 +11841,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10208,11 +11895,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10260,11 +11949,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10312,11 +12003,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10364,14 +12057,187 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
+--- !u!1 &2042117873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2042117874}
+  - component: {fileID: 2042117876}
+  - component: {fileID: 2042117875}
+  m_Layer: 0
+  m_Name: Year
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2042117874
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042117873}
+  m_LocalRotation: {x: 0.7071067, y: -0, z: -0, w: 0.70710695}
+  m_LocalPosition: {x: 0, y: 0, z: 0.143}
+  m_LocalScale: {x: 0.04049785, y: 0.040497847, z: 0.040497847}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 39579575}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.614, y: 0.01}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2042117875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042117873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 2042117876}
+  m_maskType: 0
+--- !u!23 &2042117876
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042117873}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2050770728
 GameObject:
   m_ObjectHideFlags: 0
@@ -10416,11 +12282,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10468,11 +12336,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10520,11 +12390,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10572,11 +12444,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10624,11 +12498,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10676,11 +12552,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10728,14 +12606,187 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
+--- !u!1 &2099547479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2099547480}
+  - component: {fileID: 2099547482}
+  - component: {fileID: 2099547481}
+  m_Layer: 0
+  m_Name: Month
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2099547480
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099547479}
+  m_LocalRotation: {x: 0.7071067, y: -0, z: -0, w: 0.70710695}
+  m_LocalPosition: {x: 0, y: 0, z: 0.143}
+  m_LocalScale: {x: 0.04049785, y: 0.040497847, z: 0.040497847}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 130612030}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.048, y: 0.01}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2099547481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099547479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Month
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 2099547482}
+  m_maskType: 0
+--- !u!23 &2099547482
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099547479}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2100047554
 GameObject:
   m_ObjectHideFlags: 0
@@ -10780,11 +12831,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10832,11 +12885,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10884,11 +12939,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -10936,14 +12993,187 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
+--- !u!1 &2113610654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2113610655}
+  - component: {fileID: 2113610657}
+  - component: {fileID: 2113610656}
+  m_Layer: 0
+  m_Name: Day
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2113610655
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113610654}
+  m_LocalRotation: {x: 0.7071067, y: -0, z: -0, w: 0.70710695}
+  m_LocalPosition: {x: 0, y: 0, z: 0.143}
+  m_LocalScale: {x: 0.04049785, y: 0.040497847, z: 0.040497847}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 39579575}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.786, y: 0.01}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2113610656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113610654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 2113610657}
+  m_maskType: 0
+--- !u!23 &2113610657
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113610654}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2114008522
 GameObject:
   m_ObjectHideFlags: 0
@@ -10988,11 +13218,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -11040,11 +13272,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -11092,11 +13326,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9f27644427a3d45a19b41ee7cc2a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reservation: {fileID: 0}
   possibleDates: 00000000
   possibleMonths: 00000000
   possibleYears: 00000000
   isTicketCorrrect: 0
   hasTicketBeenChecked: 0
+  lastStampUsed: 0
   dayText: {fileID: 0}
   monthText: {fileID: 0}
   yearText: {fileID: 0}
@@ -11148,6 +13384,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7070086445095971082, guid: 4d03293c18dbf8843bf42e0e48ce8557, type: 3}
+      propertyPath: dayConfigFile
+      value: 
+      objectReference: {fileID: 11400000, guid: 8279f58c181ba6945a401e879ac1eaf7, type: 2}
     - target: {fileID: 8209559333784238104, guid: 4d03293c18dbf8843bf42e0e48ce8557, type: 3}
       propertyPath: m_Name
       value: DataManager
@@ -11163,7 +13403,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1769661923}
     m_Modifications:
     - target: {fileID: 109305999269101235, guid: 9575e26ded7cada41a64009ee388ea67, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11205,6 +13445,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1415592273652561516, guid: 9575e26ded7cada41a64009ee388ea67, type: 3}
+      propertyPath: Reservation
+      value: 
+      objectReference: {fileID: 27508776}
     - target: {fileID: 2994164119252029833, guid: 9575e26ded7cada41a64009ee388ea67, type: 3}
       propertyPath: m_Mass
       value: 1
@@ -11219,7 +13463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7902303051179719543, guid: 9575e26ded7cada41a64009ee388ea67, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11233,7 +13477,7 @@ SceneRoots:
   - {fileID: 1793528833}
   - {fileID: 1895170853}
   - {fileID: 2707849617930445425}
-  - {fileID: 7779237815875583085}
   - {fileID: 184511161}
   - {fileID: 1698702721}
   - {fileID: 1502529298}
+  - {fileID: 1769661923}

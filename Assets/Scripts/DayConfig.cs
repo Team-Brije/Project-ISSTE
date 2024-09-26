@@ -5,6 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "Day/Day Config", order = 1)]
 public class DayConfig : ScriptableObject
 {
+    [Header("DocumentVariables")]
+    public bool hasReservation;
+    public bool hasXRay;
+    public bool hasBlacklist;
+
     [Header("Date Variables")]
     public int day;
     public int month;

@@ -1,15 +1,11 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Ticket : MonoBehaviour
+public class Reservation : MonoBehaviour
 {
-    [Header("Document Bools")]
-    public Reservation Reservation;
-
-
+    // Start is called before the first frame update
     [Header("Data")]
     public List<int> possibleDates = new List<int>();
     public List<int> possibleMonths = new List<int>();
@@ -17,15 +13,20 @@ public class Ticket : MonoBehaviour
 
     DataManager manager;
 
-    public bool isTicketCorrrect;
-    public bool hasTicketBeenChecked;
-    public bool lastStampUsed;
+    bool isHotelCorrect;
+    public bool isResCorrrect;
+
 
     public TextMeshPro dayText;
     public TextMeshPro monthText;
     public TextMeshPro yearText;
+    public TextMeshPro hotelText;
 
     int day, month, year;
+
+    enum Hotels { Hotel1, Hotel2, Hotel3, Hotel4 };
+
+    Hotels hotels;
 
     // Start is called before the first frame update
     void OnEnable()
@@ -35,7 +36,7 @@ public class Ticket : MonoBehaviour
         AddWeight();
         GetDateAndCheck();
         DisplayData();
-        Invoke(nameof(CheckForDocuments),0.1f);
+
         StartCoroutine(resetRigi());
     }
 
@@ -45,9 +46,8 @@ public class Ticket : MonoBehaviour
         possibleDates.Clear();
         possibleMonths.Clear();
         possibleYears.Clear();
-        hasTicketBeenChecked = false;
 
-        for (int day = 0; day < manager.poolSize;  day++)
+        for (int day = 0; day < manager.poolSize; day++)
         {
             possibleDates.Add(day);
         }
@@ -69,7 +69,7 @@ public class Ticket : MonoBehaviour
             }
             else
             {
-                possibleDates[i] = Random.Range(1,30);
+                possibleDates[i] = Random.Range(1, 30);
             }
         }
 
@@ -82,14 +82,14 @@ public class Ticket : MonoBehaviour
             }
             else
             {
-                possibleMonths[i] = Random.Range(1,12);
+                possibleMonths[i] = Random.Range(1, 12);
             }
         }
 
         for (int i = 1; i < possibleYears.Count; i++)
         {
             possibleYears[i] = manager.year + Random.Range(manager.yearRange * -1, manager.yearRange);
-        }    
+        }
     }
 
     void AddWeight()
@@ -112,32 +112,38 @@ public class Ticket : MonoBehaviour
             possibleYears[i] = manager.year;
         }
 
-        
+        int hotelnum = Random.Range(1, 4);
+
+        if (hotelnum == 1) { hotels = Hotels.Hotel1; }
+        if (hotelnum == 2) { hotels = Hotels.Hotel2; }
+        if (hotelnum == 3) { hotels = Hotels.Hotel3; }
+        if (hotelnum == 4) { hotels = Hotels.Hotel4; }
     }
 
     void GetDateAndCheck()
     {
-        day = possibleDates[Random.Range(0,possibleDates.Count)];
+        day = possibleDates[Random.Range(0, possibleDates.Count)];
         month = possibleMonths[Random.Range(0, possibleMonths.Count)];
         year = possibleYears[Random.Range(0, possibleYears.Count)];
 
         //Debug.Log("The random date was: " + day + "/" + month + "/" + year);
+        if (hotels == Hotels.Hotel1 && manager.Hotel1) { isHotelCorrect = true; }
+        else if (hotels == Hotels.Hotel2 && manager.Hotel2) { isHotelCorrect = true; }
+        else if (hotels == Hotels.Hotel3 && manager.Hotel3) { isHotelCorrect = true; }
+        else if (hotels == Hotels.Hotel4 && manager.Hotel4) { isHotelCorrect = true; }
+        else { isHotelCorrect = false; }
 
-        if (day == manager.day && month == manager.month && year == manager.year)
+        if (day == manager.day && month == manager.month && year == manager.year && isHotelCorrect)
         {
-            Debug.Log("This Ticket would be correct");
-            isTicketCorrrect = true;
+            Debug.Log("This Reservation is Correct");
+            isResCorrrect = true;
         }
         else
         {
-            Debug.Log("This Ticket would be incorrect");
-            isTicketCorrrect = false;
+            Debug.Log("This Reservation is Inorrect");
+            isResCorrrect = false;
         }
-    }
 
-    public void CheckForDocuments()
-    {
-        if (manager.hasReservation == true) { isTicketCorrrect = Reservation.GetValue(); }
     }
 
     void DisplayData()
@@ -145,11 +151,22 @@ public class Ticket : MonoBehaviour
         dayText.text = day.ToString();
         monthText.text = month.ToString();
         yearText.text = year.ToString();
+        if (hotels == Hotels.Hotel1) { hotelText.text = "HOTEL 1"; }
+        if (hotels == Hotels.Hotel2) { hotelText.text = "HOTEL 2"; }
+        if (hotels == Hotels.Hotel3) { hotelText.text = "HOTEL 3"; }
+        if (hotels == Hotels.Hotel4) { hotelText.text = "HOTEL 4"; }
     }
 
-    public IEnumerator resetRigi(){
+    public IEnumerator resetRigi()
+    {
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
         yield return new WaitForSeconds(0.1f);
         gameObject.GetComponent<Rigidbody>().isKinematic = false;
     }
+
+    public bool GetValue()
+    {
+        return isResCorrrect;
+    }
+
 }
