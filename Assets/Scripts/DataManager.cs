@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
+    [Header("DocumentVariables")]
+    [HideInInspector] public bool hasReservation;
+    [HideInInspector] public bool hasXRay;
+    [HideInInspector] public bool hasBlacklist;
+
     [Header("Date Variables")]
     [HideInInspector] public int day;
     [HideInInspector] public int month;
@@ -17,7 +22,12 @@ public class DataManager : MonoBehaviour
     [HideInInspector] public int dayRange;
     [HideInInspector] public int monthRange;
     [HideInInspector] public int yearRange;
-    [HideInInspector] public List<bool> Hotels = new List<bool>();
+
+    [Header("Ticket Difficulty Variables")]
+    [HideInInspector] public bool Hotel1;
+    [HideInInspector] public bool Hotel2;
+    [HideInInspector] public bool Hotel3;
+    [HideInInspector] public bool Hotel4;
 
 
     public DayConfig dayConfigFile;
@@ -73,6 +83,10 @@ public class DataManager : MonoBehaviour
     
     public void SetValues()
     {
+        hasReservation = dayConfigFile.hasReservation;
+        hasXRay = dayConfigFile.hasXRay;
+        hasBlacklist = dayConfigFile.hasBlacklist;
+
         day = dayConfigFile.day;
         month = dayConfigFile.month;
         year = dayConfigFile.year;
@@ -85,10 +99,10 @@ public class DataManager : MonoBehaviour
         monthRange = dayConfigFile.monthRange;
         yearRange = dayConfigFile.yearRange;
 
-        Hotels.Add(dayConfigFile.Hotel1);
-        Hotels.Add(dayConfigFile.Hotel2);
-        Hotels.Add(dayConfigFile.Hotel3);
-        Hotels.Add(dayConfigFile.Hotel4);
+        Hotel1 = dayConfigFile.Hotel1;
+        Hotel2 = dayConfigFile.Hotel2;
+        Hotel3 = dayConfigFile.Hotel3;
+        Hotel4 = dayConfigFile.Hotel4;
     }
 
     // Update is called once per frame
