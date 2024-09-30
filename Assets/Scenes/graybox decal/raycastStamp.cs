@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class raycastStamp : MonoBehaviour
 {
-    public static event Action<bool,bool,bool> OnInteract;
+    public static event Action<bool, bool, bool> OnInteract;
 
     public GameObject decalxd;
     public float distanceRay;
     public GameObject selloxd;
     public bool StampAproved;
     public bool tieneTinta;
+    public Material[] materials;
+    public GameObject selloDown;
 
     public GameObject TicketBucket;
     // Start is called before the first frame update
@@ -23,21 +25,9 @@ public class raycastStamp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if(Physics.Raycast(transform.position,transform.TransformDirection(Vector3.forward), out RaycastHit hitinfo, distanceRay))
-        {
-            Debug.Log("hay: "+hitinfo);
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitinfo.distance, Color.red);
-            decalxd.transform.position = hitinfo.point;
-            decalxd.transform.rotation = selloxd.transform.rotation;
-        }
-        else
-        {
-            Debug.Log("no hay na: " + hitinfo.transform); Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitinfo.distance, Color.blue);
-        }*/
-        Debug.Log("tienetinta " + tieneTinta);
         if (tieneTinta)
         {
+            selloDown.GetComponent<MeshRenderer>().material = materials[1];
             activarSello();
         }
     }
@@ -71,12 +61,12 @@ public class raycastStamp : MonoBehaviour
                     }
 
                 }
+                selloDown.GetComponent<MeshRenderer>().material = materials[0];
                 tieneTinta = false;
             }
         }
         else
         {
-            //Debug.Log("no hay na: " + hitinfo.transform);
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitinfo.distance, Color.blue);
         }
 
