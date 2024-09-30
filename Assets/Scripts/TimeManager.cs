@@ -22,7 +22,11 @@ public class TimeManager : MonoBehaviour
     public GameObject PlayButton;
 
     public DayConfig[] dayList;
-    
+
+    Scene currentScene = SceneManager.GetActiveScene();
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -78,7 +82,7 @@ public class TimeManager : MonoBehaviour
     {
         //Invoke(nameof(TimerCountdown), 0);
         boton.SetActive(false);
-        SceneManager.LoadScene("graybox");
+        SceneManager.LoadScene(currentScene.name);
     }
 
     public void Play()
