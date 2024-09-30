@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class TimeManager : MonoBehaviour
 {
     //Variables for Day system
-    public static int Day = 1;
+    public static int Day = 0;
     private int timer;
     private static   int begTime = 5 ;
     private int extraTime = 5;
@@ -20,11 +20,13 @@ public class TimeManager : MonoBehaviour
     public TextMeshProUGUI Temporizador;
     public GameObject boton;
     public GameObject PlayButton;
+
+    public DayConfig[] dayList;
     
     // Start is called before the first frame update
     void Start()
     {
-        if (Day == 1)
+        if (Day == 0)
         {
 
             timer = begTime;
@@ -37,6 +39,8 @@ public class TimeManager : MonoBehaviour
         Debug.Log(begTime);
 
         TimerCountdown();
+        DaySelector();
+
 
     }
 
@@ -74,12 +78,21 @@ public class TimeManager : MonoBehaviour
     {
         //Invoke(nameof(TimerCountdown), 0);
         boton.SetActive(false);
-        SceneManager.LoadScene("Timer");
+        SceneManager.LoadScene("graybox");
     }
 
     public void Play()
     {
         PlayButton.SetActive(false);
         playPressed = true;
+    }
+
+    void DaySelector()
+    {
+        if (dayList.Length > 0)
+        {
+            DayConfig currentDay = dayList[Day];
+            DataManager.Instance.ReceiveDay(currentDay);
+        }
     }
 }

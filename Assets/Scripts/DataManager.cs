@@ -105,9 +105,10 @@ public class DataManager : MonoBehaviour
         Hotel4 = dayConfigFile.Hotel4;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void ReceiveDay(DayConfig currentDay)
     {
-        
+        dayConfigFile = currentDay;
+
     }
 }
