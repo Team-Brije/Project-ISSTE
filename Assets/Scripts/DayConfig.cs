@@ -7,7 +7,7 @@ public class DayConfig : ScriptableObject
 {
     [Header("DocumentVariables")]
     public bool hasReservation;
-    public bool hasXRay;
+    public bool hasID;
     public bool hasBlacklist;
 
     [Header("Date Variables")]

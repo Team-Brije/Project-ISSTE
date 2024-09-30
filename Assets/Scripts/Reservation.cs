@@ -27,7 +27,7 @@ public class Reservation : MonoBehaviour
     enum Hotels { Hotel1, Hotel2, Hotel3, Hotel4 };
 
     Hotels hotels;
-
+    private Coroutine corResetRig;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -36,10 +36,24 @@ public class Reservation : MonoBehaviour
         AddWeight();
         GetDateAndCheck();
         DisplayData();
-
+        if (corResetRig != null) { StopCoroutine(corResetRig); }
         StartCoroutine(resetRigi());
     }
+    private void OnDestroy()
+    {
+        if (corResetRig != null) { StopCoroutine(corResetRig); }
+        possibleDates.Clear();
+        possibleMonths.Clear();
+        possibleYears.Clear();
+    }
 
+    private void OnDisable()
+    {
+        if (corResetRig != null) { StopCoroutine(corResetRig); }
+        possibleDates.Clear();
+        possibleMonths.Clear();
+        possibleYears.Clear();
+    }
 
     void InitializeValues()
     {

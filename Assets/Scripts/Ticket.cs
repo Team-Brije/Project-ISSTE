@@ -26,7 +26,7 @@ public class Ticket : MonoBehaviour
     public TextMeshPro yearText;
 
     int day, month, year;
-
+    private Coroutine corResetRig;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -36,7 +36,24 @@ public class Ticket : MonoBehaviour
         GetDateAndCheck();
         DisplayData();
         Invoke(nameof(CheckForDocuments),0.1f);
-        StartCoroutine(resetRigi());
+        if (corResetRig != null) { StopCoroutine(corResetRig); }
+        corResetRig = StartCoroutine(resetRigi());
+    }
+
+    private void OnDestroy()
+    {
+        if (corResetRig != null) { StopCoroutine(corResetRig); }
+        possibleDates.Clear();
+        possibleMonths.Clear();
+        possibleYears.Clear();
+    }
+
+    private void OnDisable()
+    {
+        if (corResetRig != null) { StopCoroutine(corResetRig); }
+        possibleDates.Clear();
+        possibleMonths.Clear();
+        possibleYears.Clear();
     }
 
 

@@ -7,7 +7,7 @@ public class DataManager : MonoBehaviour
 {
     [Header("DocumentVariables")]
     [HideInInspector] public bool hasReservation;
-    [HideInInspector] public bool hasXRay;
+    [HideInInspector] public bool hasID;
     [HideInInspector] public bool hasBlacklist;
 
     [Header("Date Variables")]
@@ -84,7 +84,7 @@ public class DataManager : MonoBehaviour
     public void SetValues()
     {
         hasReservation = dayConfigFile.hasReservation;
-        hasXRay = dayConfigFile.hasXRay;
+        hasID = dayConfigFile.hasID;
         hasBlacklist = dayConfigFile.hasBlacklist;
 
         day = dayConfigFile.day;
