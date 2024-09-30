@@ -23,27 +23,21 @@ public class TimeManager : MonoBehaviour
 
     public DayConfig[] dayList;
 
-    Scene currentScene = SceneManager.GetActiveScene();
+    public DayConfig CurDay;
+
+    
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        if (Day == 0)
-        {
-
-            timer = begTime;
-        }else
-        {
-            begTime = begTime + extraTime;
-            timer = begTime;
-        }
-        Temporizador.text = timer.ToString();
+        
+        //Temporizador.text = timer.ToString();
         Debug.Log(begTime);
-
         TimerCountdown();
         DaySelector();
+        Temporizador.text = timer.ToString();
 
 
     }
@@ -82,7 +76,7 @@ public class TimeManager : MonoBehaviour
     {
         //Invoke(nameof(TimerCountdown), 0);
         boton.SetActive(false);
-        SceneManager.LoadScene(currentScene.name);
+        SceneManager.LoadScene("Level");
     }
 
     public void Play()
@@ -95,6 +89,8 @@ public class TimeManager : MonoBehaviour
     {
         if (dayList.Length > 0)
         {
+            CurDay = dayList[Day];
+            timer = CurDay.Time;    
             DayConfig currentDay = dayList[Day];
             DataManager.Instance.ReceiveDay(currentDay);
         }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Day1
   m_EditorClassIdentifier: 
   hasReservation: 0
-  hasXRay: 0
+  hasID: 0
   hasBlacklist: 0
   day: 24
   month: 7
@@ -29,3 +29,4 @@ MonoBehaviour:
   dayRange: 10
   monthRange: 5
   yearRange: 50
+  Time: 300
