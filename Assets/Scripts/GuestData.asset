@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 620a315ca6b582d45a0128fd3407b9d4, type: 3}
-  m_Name: Octopussy
+  m_Name: GuestData
   m_EditorClassIdentifier: 
   AlienType:
   - Human
@@ -52,7 +52,6 @@ MonoBehaviour:
   - Neptune
   - TON-618
   Model:
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
