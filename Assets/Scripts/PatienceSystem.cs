@@ -5,41 +5,49 @@ using UnityEngine;
 
 public class PatienceSystem : MonoBehaviour
 {
-    public static List<GameObject> queue = new List<GameObject>();
+    public QueueSysem queue;
+    private GameManager gameManager;
     public float waitSecs;
+    public GameObject ticket;
     [SerializeField] private float waitTime;
-    public float maxWait;
-    public float minWait;
-    [SerializeField] private int position;
-    private bool gotToStall = false;
+    [SerializeField] private float maxWait;
+    [SerializeField] private float minWait;
+    bool gone;
 
     private void Start()
     {
-        queue.Add(gameObject);
+        //queue.Add(gameObject);
+        gameManager = FindAnyObjectByType<GameManager>();
+        ticket = GameObject.FindGameObjectWithTag("Ticket");
+        queue = FindAnyObjectByType<QueueSysem>();
+        if (TimeManager.Day == 0)
+        {
+            maxWait = 40;
+            minWait = 20;
+        }
         waitTime = UnityEngine.Random.Range(minWait, maxWait);
     }
 
 
     void Update()
     {
-        position = queue.IndexOf(gameObject);
-        if (position == 0 && !gotToStall)
-        {
-            waitSecs = 0;
-            waitTime = UnityEngine.Random.Range(minWait, maxWait);
-            gotToStall=true;
-        }
         waitSecs += Time.deltaTime;
         if (waitSecs >= waitTime) 
         {
+            gone = true;
             Fail();
         }
     }
 
     void Fail()
     {
-        Debug.Log("se fue");
-        queue.Remove(gameObject);
-        Destroy(gameObject);
+        if (gone)
+        {
+            gone = false;
+            Debug.Log("se fue");
+            ticket.SetActive(false);
+            gameManager.BadCheck();
+            queue.Lift();
+        }
     }
 }
