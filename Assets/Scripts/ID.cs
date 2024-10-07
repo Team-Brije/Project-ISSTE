@@ -1,15 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Ticket : MonoBehaviour
+public class ID : MonoBehaviour
 {
-    [Header("Document Bools")]
-    public Reservation Reservation;
-    public ID ID;
-
-
+    // Start is called before the first frame update
     [Header("Data")]
     public List<int> possibleDates = new List<int>();
     public List<int> possibleMonths = new List<int>();
@@ -17,16 +14,12 @@ public class Ticket : MonoBehaviour
 
     DataManager manager;
 
-    public bool isTicketCorrrect;
-    bool isResCorrect, isIdCorrect;
-    [HideInInspector]public bool hasTicketBeenChecked;
-    [HideInInspector]public bool lastStampUsed;
+    public bool isIDCorrrect;
 
-    public TextMeshPro dayText;
-    public TextMeshPro monthText;
-    public TextMeshPro yearText;
+    public TextMeshPro DateText;
 
     int day, month, year;
+
     private Coroutine corResetRig;
     // Start is called before the first frame update
     void OnEnable()
@@ -36,11 +29,9 @@ public class Ticket : MonoBehaviour
         AddWeight();
         GetDateAndCheck();
         DisplayData();
-        Invoke(nameof(CheckForDocuments),0.1f);
         if (corResetRig != null) { StopCoroutine(corResetRig); }
-        corResetRig = StartCoroutine(resetRigi());
+        StartCoroutine(resetRigi());
     }
-
     private void OnDestroy()
     {
         if (corResetRig != null) { StopCoroutine(corResetRig); }
@@ -57,15 +48,13 @@ public class Ticket : MonoBehaviour
         possibleYears.Clear();
     }
 
-
     void InitializeValues()
     {
         possibleDates.Clear();
         possibleMonths.Clear();
         possibleYears.Clear();
-        hasTicketBeenChecked = false;
 
-        for (int day = 0; day < manager.poolSize;  day++)
+        for (int day = 0; day < manager.poolSize; day++)
         {
             possibleDates.Add(day);
         }
@@ -87,7 +76,7 @@ public class Ticket : MonoBehaviour
             }
             else
             {
-                possibleDates[i] = Random.Range(1,30);
+                possibleDates[i] = Random.Range(1, 30);
             }
         }
 
@@ -100,22 +89,21 @@ public class Ticket : MonoBehaviour
             }
             else
             {
-                possibleMonths[i] = Random.Range(1,12);
+                possibleMonths[i] = Random.Range(1, 12);
             }
         }
 
         for (int i = 1; i < possibleYears.Count; i++)
         {
             possibleYears[i] = manager.year + Random.Range(manager.yearRange * -1, manager.yearRange);
-        }    
+        }
     }
 
     void AddWeight()
     {
-        int dayvalue = (manager.DayPercentage * manager.poolSize) / 100;
-        int monthvalue = (manager.MonthPercentage * manager.poolSize) / 100;
-        int yearvalue = (manager.YearPercentage * manager.poolSize) / 100;
-
+        int dayvalue = (manager.DayPercentage * manager.poolSize) / 150;
+        int monthvalue = (manager.MonthPercentage * manager.poolSize) / 150;
+        int yearvalue = (manager.YearPercentage * manager.poolSize) / 150;
 
         for (int i = 0; i < dayvalue; i++)
         {
@@ -129,57 +117,55 @@ public class Ticket : MonoBehaviour
         {
             possibleYears[i] = manager.year;
         }
-
-        
     }
 
     void GetDateAndCheck()
     {
-        day = possibleDates[Random.Range(0,possibleDates.Count)];
+        day = possibleDates[Random.Range(0, possibleDates.Count)];
         month = possibleMonths[Random.Range(0, possibleMonths.Count)];
         year = possibleYears[Random.Range(0, possibleYears.Count)];
 
+        day += Random.Range(1, 5);
+        day -= Random.Range(1, 5);
+
+        month += Random.Range(1, 3);
+        month -= Random.Range(1, 3);
+
+        if (day > 30) { day = 30; }
+        if (month > 12) { month = 12; }
+
         //Debug.Log("The random date was: " + day + "/" + month + "/" + year);
+        System.DateTime IDdate = new System.DateTime(year, month, day);
+        System.DateTime Todaysdate = new System.DateTime(manager.year, manager.month, manager.day);
 
-        if (day == manager.day && month == manager.month && year == manager.year)
+        if (IDdate < Todaysdate)
         {
-            Debug.Log("This Ticket would be correct");
-            isTicketCorrrect = true;
+            Debug.Log("This ID is Incorrect");
+            isIDCorrrect = false;
         }
         else
         {
-            Debug.Log("This Ticket would be incorrect");
-            isTicketCorrrect = false;
+            Debug.Log("This ID is Correct");
+            isIDCorrrect = true;
         }
-    }
 
-    public void CheckForDocuments()
-    {   
-
-        if (manager.hasReservation) { isResCorrect = Reservation.GetValue(); Debug.Log("RESERVATION IS" + isResCorrect); } else { isResCorrect = true; }
-
-        if (manager.hasID) { isIdCorrect = ID.GetValue(); Debug.Log("ID IS" + isIdCorrect); } else { isIdCorrect = true; }
-
-        if (isResCorrect && isIdCorrect)
-        {
-            isTicketCorrrect = true;
-        }
-        else
-        {
-            isTicketCorrrect = false;
-        }
     }
 
     void DisplayData()
     {
-        dayText.text = day.ToString();
-        monthText.text = month.ToString();
-        yearText.text = year.ToString();
+        DateText.text = day.ToString() + "/" + month.ToString() + "/" + year.ToString();
     }
 
-    public IEnumerator resetRigi(){
+    public IEnumerator resetRigi()
+    {
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
         yield return new WaitForSeconds(0.1f);
         gameObject.GetComponent<Rigidbody>().isKinematic = false;
     }
+
+    public bool GetValue()
+    {
+        return isIDCorrrect;
+    }
+
 }
