@@ -25,6 +25,8 @@ public class TimeManager : MonoBehaviour
 
     public DayConfig CurDay;
 
+    public GameObject spwnAlns;
+
     
 
 
@@ -48,7 +50,7 @@ public class TimeManager : MonoBehaviour
         {
             timer--;
             Temporizador.text = timer.ToString();
-
+            spwnAlns.SetActive(true);
 
 
             if (timer != 0)
@@ -60,6 +62,7 @@ public class TimeManager : MonoBehaviour
                 Debug.Log("Se acabo el dia");
                 //timer = timer + extraTime;
                 boton.SetActive(true);
+                spwnAlns.SetActive(false);
                 Day++;
                 //SceneManager.LoadScene("Timer");
 
