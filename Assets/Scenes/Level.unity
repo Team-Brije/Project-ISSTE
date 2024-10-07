@@ -2036,7 +2036,7 @@ PrefabInstance:
       objectReference: {fileID: 1953148516}
     - target: {fileID: 721808909176283993, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
       propertyPath: dayList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 721808909176283993, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
       propertyPath: dayList.Array.data[0]
@@ -2046,6 +2046,10 @@ PrefabInstance:
       propertyPath: dayList.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: a39b85888271fbc45961fd6348f2a5ec, type: 2}
+    - target: {fileID: 721808909176283993, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
+      propertyPath: dayList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 84975d57dac76b240b997eecccb8891b, type: 2}
     - target: {fileID: 1595210890370374616, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
       propertyPath: m_text
       value: 'Next Day
@@ -2607,7 +2611,7 @@ Transform:
   m_GameObject: {fileID: 1418011652}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.131, y: 1.267, z: -0.336}
+  m_LocalPosition: {x: -1.05, y: 1.267, z: -0.336}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

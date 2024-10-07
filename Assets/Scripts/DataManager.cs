@@ -60,8 +60,7 @@ public class DataManager : MonoBehaviour
             instance = this;
             //DontDestroyOnLoad(gameObject);
         }
-
-        SetValues();
+        Invoke(nameof(SetValues),0.1f);
 
         DayPercentage = DayPercentage + 30;
         MonthPercentage = MonthPercentage + 30;
@@ -109,6 +108,11 @@ public class DataManager : MonoBehaviour
     public void ReceiveDay(DayConfig currentDay)
     {
         dayConfigFile = currentDay;
+
+    }
+
+    void resetValues()
+    {
 
     }
 }

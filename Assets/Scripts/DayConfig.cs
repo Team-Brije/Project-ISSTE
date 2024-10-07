@@ -34,4 +34,8 @@ public class DayConfig : ScriptableObject
 
     [Header("Time Management")]
     public int Time;
+
+    [Header("Patience Range")]
+    public float minTime;
+    public float maxTime;
 }

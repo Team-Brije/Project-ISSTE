@@ -9,9 +9,12 @@ public class PatienceSystem : MonoBehaviour
     private GameManager gameManager;
     public float waitSecs;
     public GameObject ticket;
-    [SerializeField] private float waitTime;
-    [SerializeField] private float maxWait;
-    [SerializeField] private float minWait;
+     public static float waitTime;
+     public static float maxWait;
+    public  static float minWait;
+
+    public static DayConfig dayConfigFile;
+
     bool gone;
 
     private void Start()
@@ -20,12 +23,8 @@ public class PatienceSystem : MonoBehaviour
         gameManager = FindAnyObjectByType<GameManager>();
         ticket = GameObject.FindGameObjectWithTag("Ticket");
         queue = FindAnyObjectByType<QueueSysem>();
-        if (TimeManager.Day == 0)
-        {
-            maxWait = 40;
-            minWait = 20;
-        }
-        waitTime = UnityEngine.Random.Range(minWait, maxWait);
+        
+        
     }
 
 
@@ -37,6 +36,11 @@ public class PatienceSystem : MonoBehaviour
             gone = true;
             Fail();
         }
+
+        Debug.Log("Min time: " + minWait);
+        Debug.Log("Max time: " + maxWait);
+        Debug.Log("Wait time: " + waitTime);
+
     }
 
     void Fail()
@@ -49,5 +53,13 @@ public class PatienceSystem : MonoBehaviour
             gameManager.BadCheck();
             queue.Lift();
         }
+    }
+    public static void ReceiveDay(DayConfig currentDay)
+    {
+        dayConfigFile = currentDay;
+        maxWait = dayConfigFile.maxTime;
+        minWait = dayConfigFile.minTime;
+        waitTime = UnityEngine.Random.Range(minWait, maxWait);
+
     }
 }

@@ -21,7 +21,7 @@ MonoBehaviour:
   Hotel1: 1
   Hotel2: 1
   Hotel3: 0
-  Hotel4: 0
+  Hotel4: 1
   poolSize: 100
   DayPercentage: 40
   MonthPercentage: 40
@@ -29,4 +29,6 @@ MonoBehaviour:
   dayRange: 10
   monthRange: 5
   yearRange: 50
-  Time: 300
+  Time: 5
+  minTime: 45
+  maxTime: 60

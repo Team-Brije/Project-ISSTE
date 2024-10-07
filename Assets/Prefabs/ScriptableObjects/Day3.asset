@@ -29,4 +29,6 @@ MonoBehaviour:
   dayRange: 10
   monthRange: 5
   yearRange: 50
-  Time: 480
+  Time: 15
+  minTime: 30
+  maxTime: 45

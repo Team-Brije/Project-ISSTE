@@ -26,20 +26,23 @@ public class TimeManager : MonoBehaviour
     public DayConfig CurDay;
 
     public GameObject spwnAlns;
-
+    public GameObject ticket;
+    public GameManager gameManager;
     
+
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        ticket = GameObject.FindGameObjectWithTag("Ticket");
         //Temporizador.text = timer.ToString();
         Debug.Log(begTime);
         TimerCountdown();
         DaySelector();
         Temporizador.text = timer.ToString();
+        gameManager = FindAnyObjectByType<GameManager>();
 
 
     }
@@ -64,6 +67,8 @@ public class TimeManager : MonoBehaviour
                 boton.SetActive(true);
                 spwnAlns.SetActive(false);
                 Day++;
+                AlienMOVEMENT.canMove = true;
+                
                 //SceneManager.LoadScene("Timer");
 
             }
@@ -96,6 +101,7 @@ public class TimeManager : MonoBehaviour
             timer = CurDay.Time;    
             DayConfig currentDay = dayList[Day];
             DataManager.Instance.ReceiveDay(currentDay);
+            PatienceSystem.ReceiveDay(currentDay);
         }
     }
 }
