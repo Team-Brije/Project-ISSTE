@@ -2031,6 +2031,10 @@ PrefabInstance:
       value: -127.878
       objectReference: {fileID: 0}
     - target: {fileID: 721808909176283993, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
+      propertyPath: spwnAlns
+      value: 
+      objectReference: {fileID: 1953148516}
+    - target: {fileID: 721808909176283993, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
       propertyPath: dayList.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -3256,7 +3260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1953148517
 Transform:
   m_ObjectHideFlags: 0
