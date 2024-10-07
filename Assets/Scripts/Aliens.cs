@@ -9,5 +9,6 @@ public class Aliens : ScriptableObject
     public string[] AlienName;
     public string[] Origin;
     public GameObject[] Model;
-
 }
+
+

@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     private bool Spawneractive = true;
     public GameObject Alienmodel;
     public Transform spawner;
+
    
     void Update()
     {
@@ -46,4 +47,5 @@ public class Spawner : MonoBehaviour
 
 
     }
+   
 }
