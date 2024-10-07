@@ -18,8 +18,9 @@ public class Ticket : MonoBehaviour
     DataManager manager;
 
     public bool isTicketCorrrect;
-    public bool hasTicketBeenChecked;
-    public bool lastStampUsed;
+    [HideInInspector]public bool hasTicketBeenChecked;
+    [HideInInspector]public bool lastStampUsed;
+    bool isResCorrect;
 
     public TextMeshPro dayText;
     public TextMeshPro monthText;
@@ -63,6 +64,7 @@ public class Ticket : MonoBehaviour
         possibleMonths.Clear();
         possibleYears.Clear();
         hasTicketBeenChecked = false;
+        isResCorrect = false;
 
         for (int day = 0; day < manager.poolSize;  day++)
         {
@@ -154,7 +156,12 @@ public class Ticket : MonoBehaviour
 
     public void CheckForDocuments()
     {
-        if (manager.hasReservation == true) { isTicketCorrrect = Reservation.GetValue(); }
+        if (manager.hasReservation == true) { isResCorrect = Reservation.GetValue(); }
+
+        if (isResCorrect)
+        {
+            isTicketCorrrect = true;
+        }
     }
 
     void DisplayData()
