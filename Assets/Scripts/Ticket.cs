@@ -155,6 +155,11 @@ public class Ticket : MonoBehaviour
 
     public void CheckForDocuments()
     {   
+        if (!manager.hasReservation && !manager.hasID)
+        {
+            return;
+        }
+
 
         if (manager.hasReservation) { isResCorrect = Reservation.GetValue(); Debug.Log("RESERVATION IS" + isResCorrect); } else { isResCorrect = true; }
 
