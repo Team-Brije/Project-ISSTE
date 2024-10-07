@@ -11822,7 +11822,7 @@ PrefabInstance:
     - target: {fileID: 7070086445095971082, guid: 4d03293c18dbf8843bf42e0e48ce8557, type: 3}
       propertyPath: dayConfigFile
       value: 
-      objectReference: {fileID: 11400000, guid: 84975d57dac76b240b997eecccb8891b, type: 2}
+      objectReference: {fileID: 11400000, guid: 8279f58c181ba6945a401e879ac1eaf7, type: 2}
     - target: {fileID: 8209559333784238104, guid: 4d03293c18dbf8843bf42e0e48ce8557, type: 3}
       propertyPath: m_Name
       value: DataManager

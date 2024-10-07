@@ -161,11 +161,11 @@ public class Ticket : MonoBehaviour
         }
 
 
-        if (manager.hasReservation) { isResCorrect = Reservation.GetValue(); Debug.Log("RESERVATION IS" + isResCorrect); } else { isResCorrect = true; }
+        if (manager.hasReservation) { isResCorrect = Reservation.GetValue(); } else { isResCorrect = true; }
 
-        if (manager.hasID) { isIdCorrect = ID.GetValue(); Debug.Log("ID IS" + isIdCorrect); } else { isIdCorrect = true; }
+        if (manager.hasID) { isIdCorrect = ID.GetValue(); } else { isIdCorrect = true; }
 
-        if (isResCorrect && isIdCorrect)
+        if (isResCorrect && isIdCorrect && isTicketCorrrect)
         {
             isTicketCorrrect = true;
         }
