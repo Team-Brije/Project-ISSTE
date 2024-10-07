@@ -12,7 +12,6 @@ public class QueueSysem : MonoBehaviour
 
     BoxCollider BoxCollider;
     bool tpticket=true;
-    bool wating = true;
 
     private void Start()
     {
@@ -26,11 +25,7 @@ public class QueueSysem : MonoBehaviour
         if (other.CompareTag("Alien"))
         {
             AlienMOVEMENT.canMove = false;
-            if (wating)
-            {
-                other.AddComponent<PatienceSystem>();
-                wating = false;
-            }
+            PatienceSystem.wait[0] += 15;
             if (tpticket){
             Ticket.transform.position = Ticketpos.transform.position;  
             tpticket=false;
@@ -44,8 +39,6 @@ public class QueueSysem : MonoBehaviour
         if (other.CompareTag("Alien"))
         {
             AlienMOVEMENT.canMove = true;
-            Destroy(other.GetComponent<PatienceSystem>());
-            wating = true;
             tpticket = true;
             //colliders.SetActive(false);
         }
