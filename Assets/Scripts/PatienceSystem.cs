@@ -10,9 +10,15 @@ public class PatienceSystem : MonoBehaviour
     public float waitSecs;
     public GameObject ticket;
      public static float waitTime;
-     public static float maxWait;
-    public  static float minWait;
-    public  static List<float> wait;
+    public static float waitTime2;
+    public static float waitTime3;
+
+    public static float maxWait;
+    public static float minWait;
+
+    public static bool gotData = false;
+    public static bool start = false;
+    public List<float> wait;
 
     public static DayConfig dayConfigFile;
 
@@ -29,16 +35,21 @@ public class PatienceSystem : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(wait);
-        waitSecs += Time.deltaTime;
+        if (start)
+        {
+            wait.Add(waitTime);
+            wait.Add(waitTime2);
+            wait.Add(waitTime3);
+        }
+        if (gotData)waitSecs += Time.deltaTime;
         for (int i = 0; i < wait.Count; i++)
         {
-            if (wait[i] >= waitTime && wait!=null)
+            if (wait[i] <= waitSecs && wait!=null && gotData)
             {
                 wait.Remove(wait[i]);
-                Fail();
+                //Fail();
                 waitTime = UnityEngine.Random.Range(minWait, maxWait);
-                if (i == 0) wait[0] += 15;
+                //if(i==0)wait[0] += 15;
                 wait.Add(waitTime + waitSecs);
             }
         }
@@ -65,11 +76,10 @@ public class PatienceSystem : MonoBehaviour
         dayConfigFile = currentDay;
         maxWait = dayConfigFile.maxTime;
         minWait = dayConfigFile.minTime;
-        for (int i = 0; i < 3; i++)
-        {
-            waitTime = UnityEngine.Random.Range(minWait, maxWait);
-            wait.Add(waitTime);
-            if (i == 0) wait[0] += 15;
-        }
+        waitTime = UnityEngine.Random.Range(minWait, maxWait);
+        waitTime2 = UnityEngine.Random.Range(minWait, maxWait);
+        waitTime3 = UnityEngine.Random.Range(minWait, maxWait);
+        gotData = true;
+        start = true;
     }
 }
