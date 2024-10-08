@@ -25,7 +25,6 @@ public class QueueSysem : MonoBehaviour
         if (other.CompareTag("Alien"))
         {
             AlienMOVEMENT.canMove = false;
-            PatienceSystem.wait[0] += 15;
             if (tpticket){
             Ticket.transform.position = Ticketpos.transform.position;  
             tpticket=false;

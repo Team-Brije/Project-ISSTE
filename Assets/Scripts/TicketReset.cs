@@ -22,6 +22,8 @@ public class TicketReset : MonoBehaviour
             OnInteract?.Invoke(ticketstatus, StampAproved, ticketcheck);
 
             other.gameObject.SetActive(false);
+            PatienceSystem.wait.Remove(PatienceSystem.wait[0]);
+            PatienceSystem.wait[0] += 15;
             queue.Lift();
             this.gameObject.SetActive(false);
             decalno.transform.parent = null;

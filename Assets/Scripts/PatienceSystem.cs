@@ -38,7 +38,7 @@ public class PatienceSystem : MonoBehaviour
                 wait.Remove(wait[i]);
                 Fail();
                 waitTime = UnityEngine.Random.Range(minWait, maxWait);
-                wait[0] += 15;
+                if (i == 0) wait[0] += 15;
                 wait.Add(waitTime + waitSecs);
             }
         }
@@ -69,6 +69,7 @@ public class PatienceSystem : MonoBehaviour
         {
             waitTime = UnityEngine.Random.Range(minWait, maxWait);
             wait.Add(waitTime);
+            if (i == 0) wait[0] += 15;
         }
     }
 }
