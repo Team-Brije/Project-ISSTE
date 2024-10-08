@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,9 @@ public class TicketReset : MonoBehaviour
     public Transform decalno;
     public Transform decalsi;
 
+    public GameObject botonCorrect;
+    public Material[] materials;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Ticket")
@@ -22,6 +26,8 @@ public class TicketReset : MonoBehaviour
             OnInteract?.Invoke(ticketstatus, StampAproved, ticketcheck);
 
             other.gameObject.SetActive(false);
+            PatienceSystem.wait.Remove(PatienceSystem.wait[0]);
+            PatienceSystem.wait[0] += 15;
             queue.Lift();
             this.gameObject.SetActive(false);
             decalno.transform.parent = null;
@@ -31,7 +37,14 @@ public class TicketReset : MonoBehaviour
             if(other.gameObject.TryGetComponent<Rigidbody>(out Rigidbody rb)){
                 rb.velocity = Vector3.zero;
             }
-            
+            if (ticketstatus)
+            {
+                StartCoroutine(TiCorrect());
+            }
+            else
+            {
+                StartCoroutine(TiNoCorrect());
+            }
         }
     }
 
@@ -45,5 +58,23 @@ public class TicketReset : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public IEnumerator TiCorrect()
+    {
+        botonCorrect.GetComponent<MeshRenderer>().material = materials[1];
+        yield return new WaitForSeconds(1);
+        botonCorrect.GetComponent<MeshRenderer>().material = materials[0];
+    }
+    public IEnumerator TiNoCorrect()
+    {
+        botonCorrect.GetComponent<MeshRenderer>().material = materials[2];
+        yield return new WaitForSeconds(1);
+        botonCorrect.GetComponent<MeshRenderer>().material = materials[0];
+    }
+
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
     }
 }

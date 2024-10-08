@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ventana
+  m_Name: ventana 1
   m_Shader: {fileID: -6465566751694194690, guid: 19d470ec4464cc246977f6d133ebb260, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -76,8 +76,8 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _dithersize: 14.13
+    - _dithersize: 4.43
     m_Colors:
-    - _BaseColor: {r: 0.14208773, g: 0.9185183, b: 0.9716981, a: 0.54509807}
+    - _BaseColor: {r: 0.050010532, g: 0.9528302, b: 0, a: 0.12156863}
     - _EmisiveColor: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

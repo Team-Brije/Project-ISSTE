@@ -28,6 +28,8 @@ public class TimeManager : MonoBehaviour
     public GameObject spwnAlns;
     public GameObject ticket;
     public GameManager gameManager;
+    //day display
+    public TextMeshProUGUI dia;
     
 
 
@@ -102,6 +104,8 @@ public class TimeManager : MonoBehaviour
             DayConfig currentDay = dayList[Day];
             DataManager.Instance.ReceiveDay(currentDay);
             PatienceSystem.ReceiveDay(currentDay);
+            dia.text = currentDay.day.ToString()+"/"+currentDay.month.ToString()+"/"+currentDay.year.ToString();
+
         }
     }
 }
