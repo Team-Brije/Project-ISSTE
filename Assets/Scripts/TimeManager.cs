@@ -103,7 +103,7 @@ public class TimeManager : MonoBehaviour
             timer = CurDay.Time;    
             DayConfig currentDay = dayList[Day];
             DataManager.Instance.ReceiveDay(currentDay);
-            PatienceSystem.ReceiveDay(currentDay);
+            //PatienceSystem.ReceiveDay(currentDay);
             dia.text = currentDay.day.ToString()+"/"+currentDay.month.ToString()+"/"+currentDay.year.ToString();
 
         }
