@@ -9,6 +9,7 @@ TagManager:
   - Ticket
   - Alien
   - TintaSello
+  - Props
   layers:
   - Default
   - TransparentFX
