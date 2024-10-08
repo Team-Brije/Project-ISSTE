@@ -13,7 +13,9 @@ public class AlienGeneration : MonoBehaviour
         int numName = Random.Range(0,aliendata.AlienName.Length);
         int numType = Random.Range(0,aliendata.AlienType.Length);
         int numModel = Random.Range(0, aliendata.Model.Length);
+        
 
+        
         name = aliendata.AlienName[numName];
         specie = aliendata.AlienType[numType];
         model = aliendata.Model[numModel];
@@ -24,6 +26,8 @@ public class AlienGeneration : MonoBehaviour
         Debug.Log(name);
         Debug.Log(specie);
         Instantiate(model,this.transform);
+
+
     }
    public void aliendespawn()
     {

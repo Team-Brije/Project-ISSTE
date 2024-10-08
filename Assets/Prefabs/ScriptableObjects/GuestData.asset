@@ -53,5 +53,13 @@ MonoBehaviour:
   - TON-618
   Model:
   - {fileID: 5131978484502547047, guid: db476cfa4c2414346b0b94d041961879, type: 3}
-  - {fileID: 972053559258915059, guid: f9c392c68b483a548896f03fc145f263, type: 3}
+  - {fileID: 2652704870293773923, guid: 6bf35f6b7989c314098582948f33562c, type: 3}
   - {fileID: 972053559258915059, guid: 7f10a60048538a84f91a66dc83c139ca, type: 3}
+  Faces:
+  - {fileID: 2100000, guid: 5a4fa40efa0d6794998cf16d037daf97, type: 2}
+  - {fileID: 2100000, guid: e76c5c342d199e146847a40fb924f085, type: 2}
+  - {fileID: 2100000, guid: 136d30d2877a2ec4e8483cb8da7f7485, type: 2}
+  - {fileID: 2100000, guid: 6ceee9f95ed1f5348817bb71f5aa1ace, type: 2}
+  - {fileID: 2100000, guid: 176519e1b29131144996fd51af48d758, type: 2}
+  - {fileID: 2100000, guid: 52a0a0d1d378d1c45b3449077acacc4c, type: 2}
+  - {fileID: 2100000, guid: 3c2b23b4a8fdca74bbe0c5332c6a07fa, type: 2}
