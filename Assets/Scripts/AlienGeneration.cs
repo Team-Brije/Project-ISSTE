@@ -7,7 +7,7 @@ public class AlienGeneration : MonoBehaviour
     public Aliens aliendata;
     string name;
     string specie;
-    GameObject model;
+    public GameObject model;
     public void alienRandomize()
     {
         int numName = Random.Range(0,aliendata.AlienName.Length);
@@ -23,20 +23,15 @@ public class AlienGeneration : MonoBehaviour
     private void OnEnable()
     {
         alienRandomize();
-        Debug.Log(name);
-        Debug.Log(specie);
+        //Debug.Log(name);
+        //Debug.Log(specie);
         Instantiate(model,this.transform);
-
-
     }
    public void aliendespawn()
     {
         Destroy(this.transform.GetChild(0).gameObject);
     }
-    private void OnDisable()
-    {
-        aliendespawn();
-    }
+ 
 
 
 

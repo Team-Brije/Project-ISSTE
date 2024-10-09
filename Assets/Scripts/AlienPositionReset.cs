@@ -16,6 +16,9 @@ public class AlienPositionReset : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         other.gameObject.transform.position = resetPoint.position;
+        other.gameObject.GetComponent<AlienGeneration>().aliendespawn();
+        other.gameObject.GetComponent<AlienGeneration>().alienRandomize();
+        Instantiate(other.gameObject.GetComponent<AlienGeneration>().model,other.transform);
     }
 
     // Update is called once per frame

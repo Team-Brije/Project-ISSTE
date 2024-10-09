@@ -11,8 +11,9 @@ public class Spawner : MonoBehaviour
     private bool Spawneractive = true;
     public GameObject Alienmodel;
     public Transform spawner;
+    AlienGeneration alienGeneration;
 
-   
+    
     void Update()
     {
         timer += Time.deltaTime;
@@ -36,6 +37,7 @@ public class Spawner : MonoBehaviour
     }
     public void spawnalien()
     {
+        Alienmodel = alienGeneration.model;
         Instantiate(Alienmodel, spawner);
         Alienlimit++;
         

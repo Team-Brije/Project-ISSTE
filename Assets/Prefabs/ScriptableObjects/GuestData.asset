@@ -52,8 +52,8 @@ MonoBehaviour:
   - Neptune
   - TON-618
   Model:
-  - {fileID: 1655307812693646722, guid: e4c2baffdbef518449452141dbd27749, type: 3}
   - {fileID: 1397208058848107524, guid: 781923b44529bc748aacd9d5626b8012, type: 3}
+  - {fileID: 1655307812693646722, guid: e4c2baffdbef518449452141dbd27749, type: 3}
   - {fileID: 972053559258915059, guid: 7f10a60048538a84f91a66dc83c139ca, type: 3}
   Faces:
   - {fileID: 2100000, guid: 5a4fa40efa0d6794998cf16d037daf97, type: 2}

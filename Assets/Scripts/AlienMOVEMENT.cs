@@ -14,6 +14,7 @@ public class AlienMOVEMENT : MonoBehaviour
     public static bool canMove = true; 
     public float speed = 10f;
     private Rigidbody rb;
+   
 
 
     void Start()
