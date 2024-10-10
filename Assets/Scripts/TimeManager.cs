@@ -28,6 +28,7 @@ public class TimeManager : MonoBehaviour
     public GameObject spwnAlns;
     public GameObject ticket;
     public GameManager gameManager;
+    public PatienceSystem patience;
     //day display
     public TextMeshProUGUI dia;
     
@@ -66,6 +67,8 @@ public class TimeManager : MonoBehaviour
             {
                 Debug.Log("Se acabo el dia");
                 //timer = timer + extraTime;
+                //ticket.SetActive(false);
+                PatienceSystem.start = false;
                 boton.SetActive(true);
                 spwnAlns.SetActive(false);
                 Day++;
@@ -93,6 +96,14 @@ public class TimeManager : MonoBehaviour
     {
         PlayButton.SetActive(false);
         playPressed = true;
+        patience.wait.Clear();
+        PatienceSystem.waitTime = UnityEngine.Random.Range(PatienceSystem.minWait, PatienceSystem.maxWait);
+        patience.wait.Add(PatienceSystem.waitTime);
+        PatienceSystem.waitTime = UnityEngine.Random.Range(PatienceSystem.minWait, PatienceSystem.maxWait);
+        patience.wait.Add(PatienceSystem.waitTime);
+        PatienceSystem.waitTime = UnityEngine.Random.Range(PatienceSystem.minWait, PatienceSystem.maxWait);
+        patience.wait.Add(PatienceSystem.waitTime);
+        PatienceSystem.start = true;
     }
 
     void DaySelector()
@@ -103,7 +114,7 @@ public class TimeManager : MonoBehaviour
             timer = CurDay.Time;    
             DayConfig currentDay = dayList[Day];
             DataManager.Instance.ReceiveDay(currentDay);
-            //PatienceSystem.ReceiveDay(currentDay);
+            PatienceSystem.ReceiveDay(currentDay);
             dia.text = currentDay.day.ToString()+"/"+currentDay.month.ToString()+"/"+currentDay.year.ToString();
 
         }

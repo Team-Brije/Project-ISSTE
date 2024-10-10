@@ -13,6 +13,7 @@ public class TicketReset : MonoBehaviour
     public Transform decalsi;
 
     public GameObject botonCorrect;
+    public PatienceSystem patienceSystem;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,8 +26,10 @@ public class TicketReset : MonoBehaviour
             OnInteract?.Invoke(ticketstatus, StampAproved, ticketcheck);
             botonCorrect.GetComponent<ColorChangeCorrect>().corutinesxd(ticketstatus,StampAproved);
             other.gameObject.SetActive(false);
-            //PatienceSystem.wait.Remove(PatienceSystem.wait[0]);
-            //PatienceSystem.wait[0] += 15;
+            patienceSystem.wait.RemoveAt(0);
+            patienceSystem.wait[0] += 15;
+            PatienceSystem.waitTime = UnityEngine.Random.Range(PatienceSystem.minWait, PatienceSystem.maxWait);
+            patienceSystem.wait.Add(PatienceSystem.waitTime + patienceSystem.waitSecs);
             queue.Lift();
             this.gameObject.SetActive(false);
             decalno.transform.parent = null;

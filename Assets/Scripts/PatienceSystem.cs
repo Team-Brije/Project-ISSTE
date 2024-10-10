@@ -8,19 +8,16 @@ public class PatienceSystem : MonoBehaviour
     public QueueSysem queue;
     private GameManager gameManager;
     public float waitSecs;
-    public GameObject ticket;
-     public static float waitTime;
-    public static float waitTime2;
-    public static float waitTime3;
+    public static float waitTime;
 
     public static float maxWait;
     public static float minWait;
 
-    public static bool gotData = false;
     public static bool start = false;
     public List<float> wait;
 
     public static DayConfig dayConfigFile;
+    public GameObject ticket;
 
     bool gone;
 
@@ -28,28 +25,31 @@ public class PatienceSystem : MonoBehaviour
     {
         //queue.Add(gameObject);
         gameManager = FindAnyObjectByType<GameManager>();
-        ticket = GameObject.FindGameObjectWithTag("Ticket");
         queue = FindAnyObjectByType<QueueSysem>();
     }
 
 
     void Update()
     {
-        if (start)
-        {
-            wait.Add(waitTime);
-            wait.Add(waitTime2);
-            wait.Add(waitTime3);
-        }
-        if (gotData)waitSecs += Time.deltaTime;
+        if (start) waitSecs += Time.deltaTime;
+        else waitSecs = 0;
         for (int i = 0; i < wait.Count; i++)
         {
-            if (wait[i] <= waitSecs && wait!=null && gotData)
+            if (wait[i] <= waitSecs && wait!=null && start)
             {
                 wait.Remove(wait[i]);
-                //Fail();
+                Fail();
                 waitTime = UnityEngine.Random.Range(minWait, maxWait);
-                //if(i==0)wait[0] += 15;
+                if (i == 0)
+                {
+                    ticket.SetActive(false);
+                    if (ticket.TryGetComponent<Rigidbody>(out Rigidbody rb))
+                    {
+                        rb.velocity = Vector3.zero;
+                    }
+                    wait[0] += 15;
+                    queue.Lift();
+                }
                 wait.Add(waitTime + waitSecs);
             }
         }
@@ -62,24 +62,13 @@ public class PatienceSystem : MonoBehaviour
 
     void Fail()
     {
-        if (gone)
-        {
-            gone = false;
-            Debug.Log("se fue");
-            ticket.SetActive(false);
-            gameManager.BadCheck();
-            queue.Lift();
-        }
+        Debug.Log("se fue");
+        gameManager.BadCheck();
     }
     public static void ReceiveDay(DayConfig currentDay)
     {
         dayConfigFile = currentDay;
         maxWait = dayConfigFile.maxTime;
         minWait = dayConfigFile.minTime;
-        waitTime = UnityEngine.Random.Range(minWait, maxWait);
-        waitTime2 = UnityEngine.Random.Range(minWait, maxWait);
-        waitTime3 = UnityEngine.Random.Range(minWait, maxWait);
-        gotData = true;
-        start = true;
     }
 }
