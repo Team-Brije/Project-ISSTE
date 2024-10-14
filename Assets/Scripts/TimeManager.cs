@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class TimeManager : MonoBehaviour
 {
@@ -44,7 +45,9 @@ public class TimeManager : MonoBehaviour
         Debug.Log(begTime);
         TimerCountdown();
         DaySelector();
-        Temporizador.text = timer.ToString();
+
+        Invoke(nameof(SetData), 0.1f);
+        
         gameManager = FindAnyObjectByType<GameManager>();
 
 
@@ -54,8 +57,13 @@ public class TimeManager : MonoBehaviour
     {
         if (playPressed == true)
         {
+
             timer--;
-            Temporizador.text = timer.ToString();
+
+            SetData();
+
+            //Temporizador.text = timer.ToString();
+
             spwnAlns.SetActive(true);
 
 
@@ -118,5 +126,15 @@ public class TimeManager : MonoBehaviour
             dia.text = currentDay.day.ToString()+"/"+currentDay.month.ToString()+"/"+currentDay.year.ToString();
 
         }
+    }
+
+    void SetData()
+    {
+        var timespan = TimeSpan.FromSeconds(timer);
+        var minutes = timespan.Minutes;
+        var seconds = timespan.Seconds;
+
+        if (seconds < 10) { Temporizador.text = minutes + ":0" + seconds; }
+        else { Temporizador.text = minutes + ":" + seconds; }
     }
 }
