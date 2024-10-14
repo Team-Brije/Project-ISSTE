@@ -15,6 +15,16 @@ public class TicketReset : MonoBehaviour
     public GameObject botonCorrect;
     public PatienceSystem patienceSystem;
 
+    public GameObject Reservation, ID;
+
+    DataManager manager;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        manager = DataManager.Instance;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Ticket")
@@ -32,6 +42,8 @@ public class TicketReset : MonoBehaviour
             patienceSystem.wait.Add(PatienceSystem.waitTime + patienceSystem.waitSecs);
             queue.Lift();
             this.gameObject.SetActive(false);
+            if (manager.hasReservation) { Reservation.SetActive(false); }
+            if (manager.hasID) { ID.SetActive(false); }
             decalno.transform.parent = null;
             decalno.transform.position = new Vector3(99,99,99);
             decalsi.transform.parent = null;
@@ -43,17 +55,6 @@ public class TicketReset : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     
 

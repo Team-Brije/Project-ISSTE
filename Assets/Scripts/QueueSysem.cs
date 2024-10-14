@@ -7,14 +7,20 @@ public class QueueSysem : MonoBehaviour
 {
     public GameObject Ticket;
     public Transform Ticketpos;
-
+    public GameObject Reservation;
+    public Transform Reservationpos;
+    public GameObject ID;
+    public Transform IDpos;
+    DataManager manager;
     public Transform initialpos;
+    
 
     BoxCollider BoxCollider;
     bool tpticket=true;
 
     private void Start()
     {
+        manager = DataManager.Instance;
         initialpos = transform;
         BoxCollider = GetComponent<BoxCollider>();
         tpticket=true;
@@ -26,11 +32,22 @@ public class QueueSysem : MonoBehaviour
         {
             AlienMOVEMENT.canMove = false;
             if (tpticket){
-            Ticket.transform.position = Ticketpos.transform.position;  
-            tpticket=false;
-            Ticket.SetActive(true);
+                Ticket.transform.position = Ticketpos.transform.position;  
+                Reservation.transform.position = Reservationpos.transform.position;
+                ID.transform.position = IDpos.transform.position;
+                tpticket =false;
+                Ticket.SetActive(true);
+                if (manager.hasReservation) { Reservation.SetActive(true); }
+                if (manager.hasID) { ID.SetActive(true); }
             }
-            print("uwu");
+            if(other.gameObject.TryGetComponent(out AlienGeneration alien))
+            {
+                if(manager.hasID)
+                {
+                    ID.GetComponent<ID>().nameText.text = alien._name;
+                    ID.GetComponent<ID>().speciesText.text = alien.specie;
+                }
+            }
         }
     }
     private void OnTriggerExit(Collider other)

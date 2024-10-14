@@ -16,7 +16,7 @@ public class ID : MonoBehaviour
 
     public bool isIDCorrrect;
 
-    public TextMeshPro DateText;
+    public TextMeshPro DateText, nameText, speciesText;
 
     int day, month, year;
 
