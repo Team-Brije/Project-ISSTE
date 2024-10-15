@@ -227,6 +227,8 @@ MonoBehaviour:
   possibleYears: 
   isIDCorrrect: 0
   DateText: {fileID: 4546708061485650789}
+  nameText: {fileID: 5561567185827331483}
+  speciesText: {fileID: 4954754635235651788}
 --- !u!54 &6445168044250269398
 Rigidbody:
   m_ObjectHideFlags: 0
