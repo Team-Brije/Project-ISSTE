@@ -16,13 +16,15 @@ public class TicketReset : MonoBehaviour
     public PatienceSystem patienceSystem;
 
     public GameObject Reservation, ID;
-
+    Collider boxCollider;
     DataManager manager;
 
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         manager = DataManager.Instance;
+        boxCollider = gameObject.GetComponent<Collider>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -41,7 +43,9 @@ public class TicketReset : MonoBehaviour
             PatienceSystem.waitTime = UnityEngine.Random.Range(PatienceSystem.minWait, PatienceSystem.maxWait);
             patienceSystem.wait.Add(PatienceSystem.waitTime + patienceSystem.waitSecs);
             queue.Lift();
-            this.gameObject.SetActive(false);
+            boxCollider.enabled = false;
+            //this.gameObject.SetActive(false);
+            animator.SetTrigger("OUT");
             if (manager.hasReservation) { Reservation.SetActive(false); }
             if (manager.hasID) { ID.SetActive(false); }
             decalno.transform.parent = null;

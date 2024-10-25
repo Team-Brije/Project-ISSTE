@@ -14,8 +14,8 @@ public class raycastStamp : MonoBehaviour
     public bool tieneTinta;
     public Material[] materials;
     public GameObject selloDown;
-
-    public GameObject TicketBucket;
+    public Animator animator;
+    public Collider TicketBucket;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,7 +57,8 @@ public class raycastStamp : MonoBehaviour
                     {
                         hitinfo.transform.gameObject.GetComponent<Ticket>().lastStampUsed = StampAproved;
                         hitinfo.transform.gameObject.GetComponent<Ticket>().hasTicketBeenChecked = true;
-                        TicketBucket.SetActive(true);
+                        TicketBucket.enabled = true;
+                        animator.SetTrigger("IN");
                     }
 
                 }
