@@ -26,9 +26,10 @@ MonoBehaviour:
   DayPercentage: 40
   MonthPercentage: 40
   YearPercentage: 40
-  dayRange: 10
-  monthRange: 5
-  yearRange: 50
+  dayRange: 5
+  monthRange: 2
+  yearRange: 5
   Time: 350
   minTime: 45
   maxTime: 60
+  blacklist: {fileID: 0}

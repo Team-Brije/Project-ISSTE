@@ -13,7 +13,7 @@ public class QueueSysem : MonoBehaviour
     public Transform IDpos;
     DataManager manager;
     public Transform initialpos;
-    
+    public Blacklist blacklist;
 
     BoxCollider BoxCollider;
     bool tpticket=true;
@@ -38,14 +38,17 @@ public class QueueSysem : MonoBehaviour
                 tpticket =false;
                 Ticket.SetActive(true);
                 if (manager.hasReservation) { Reservation.SetActive(true); }
-                if (manager.hasID) { ID.SetActive(true); }
+                if (manager.hasID) { ID.SetActive(true); }        
             }
             if(other.gameObject.TryGetComponent(out AlienGeneration alien))
             {
                 if(manager.hasID)
                 {
                     ID.GetComponent<ID>().nameText.text = alien._name;
+                    blacklist.AlienName = alien._name;
                     ID.GetComponent<ID>().speciesText.text = alien.specie;
+                    blacklist.species = alien.specie;
+                    blacklist.UpdateValues();
                 }
             }
         }

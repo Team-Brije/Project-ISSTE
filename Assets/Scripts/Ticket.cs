@@ -8,7 +8,7 @@ public class Ticket : MonoBehaviour
     [Header("Document Bools")]
     public Reservation Reservation;
     public ID ID;
-
+    public Blacklist Blacklist;
 
     [Header("Data")]
     public List<int> possibleDates = new List<int>();
@@ -18,7 +18,7 @@ public class Ticket : MonoBehaviour
     DataManager manager;
 
     public bool isTicketCorrrect;
-    bool isResCorrect, isIdCorrect;
+    bool isResCorrect, isIdCorrect, isAllowedToEnter;
     [HideInInspector]public bool hasTicketBeenChecked;
     [HideInInspector]public bool lastStampUsed;
 
@@ -165,7 +165,9 @@ public class Ticket : MonoBehaviour
 
         if (manager.hasID) { isIdCorrect = ID.GetValue(); } else { isIdCorrect = true; }
 
-        if (isResCorrect && isIdCorrect && isTicketCorrrect)
+        if (manager.hasBlacklist) { isAllowedToEnter = Blacklist.GetValue(); } else { isAllowedToEnter = true; }
+
+        if (isResCorrect && isIdCorrect && isTicketCorrrect && isAllowedToEnter)
         {
             isTicketCorrrect = true;
         }

@@ -29,6 +29,10 @@ public class DataManager : MonoBehaviour
     [HideInInspector] public bool Hotel3;
     [HideInInspector] public bool Hotel4;
 
+    [HideInInspector] public string[] Blacklist_Name_Only;
+    [HideInInspector] public string[] Blacklist_Species_Only;
+    [HideInInspector] public string[] Blacklist_Name_And_Species;
+
 
     public DayConfig dayConfigFile;
 
@@ -60,7 +64,7 @@ public class DataManager : MonoBehaviour
             instance = this;
             //DontDestroyOnLoad(gameObject);
         }
-        Invoke(nameof(SetValues),0.1f);
+        Invoke(nameof(SetValues),0.01f);
 
         DayPercentage = DayPercentage + 30;
         MonthPercentage = MonthPercentage + 30;
@@ -102,13 +106,16 @@ public class DataManager : MonoBehaviour
         Hotel2 = dayConfigFile.Hotel2;
         Hotel3 = dayConfigFile.Hotel3;
         Hotel4 = dayConfigFile.Hotel4;
+
+        if (dayConfigFile.blacklist.NAME_ONLY.Length > 0) Blacklist_Name_Only = dayConfigFile.blacklist.NAME_ONLY;
+        if (dayConfigFile.blacklist.SPECIES_ONLY.Length > 0) Blacklist_Species_Only = dayConfigFile.blacklist.SPECIES_ONLY;
+        if (dayConfigFile.blacklist.NAME_AND_SPECIES.Length > 0) Blacklist_Name_And_Species = dayConfigFile.blacklist.NAME_AND_SPECIES;
     }
 
 
     public void ReceiveDay(DayConfig currentDay)
     {
         dayConfigFile = currentDay;
-
     }
 
     void resetValues()

@@ -17,6 +17,10 @@ public class ID : MonoBehaviour
     public bool isIDCorrrect;
 
     public TextMeshPro DateText, nameText, speciesText;
+    
+    [HideInInspector]
+    public string AlienName, species;
+
 
     int day, month, year;
 

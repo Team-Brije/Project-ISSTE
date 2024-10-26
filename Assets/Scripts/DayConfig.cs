@@ -38,4 +38,7 @@ public class DayConfig : ScriptableObject
     [Header("Patience Range")]
     public float minTime;
     public float maxTime;
+
+    [Header("Blacklist Scriptable Object")]
+    public BlacklistVariables blacklist;
 }
