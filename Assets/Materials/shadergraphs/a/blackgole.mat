@@ -37,9 +37,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_2E510540: 0.7030833
-    - Vector1_36874B96: 0.007289694
-    - Vector1_DC2B334F: 3.700508
+    - Vector1_2E510540: 0.847
+    - Vector1_36874B96: 0.0229
+    - Vector1_DC2B334F: 7.57
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors: []
