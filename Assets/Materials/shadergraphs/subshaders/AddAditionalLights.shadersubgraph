@@ -367,7 +367,7 @@
     "m_Group": {
         "m_Id": ""
     },
-    "m_Name": "AddAditionalLights (Custom Function)",
+    "m_Name": "CalculateMainLight_float (Custom Function)",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -422,7 +422,7 @@
         "m_SerializableColors": []
     },
     "m_SourceType": 0,
-    "m_FunctionName": "AddAditionalLights",
+    "m_FunctionName": "CalculateMainLight_float",
     "m_FunctionSource": "47eea40599d23e9489eae68a1c5a56b0",
     "m_FunctionBody": "#ifndef CUSTOM_LIGHTING_INCLUDED\r\n#define CUSTOM_LIGHTING_INCLUDED\r\n\r\nvoid CalculateMainLight_float(float3 WorldPos, out float3 Direction, out float3 Color, out half DistanceAtten, out half ShadowAtten) {\r\n#ifdef SHADERGRAPH_PREVIEW\r\n    Direction = half3(0.5, 0.5, 0);\r\n    Color = 1;\r\n    DistanceAtten = 1;\r\n    ShadowAtten = 1;\r\n#else\r\n#if SHADOWS_SCREEN\r\n    half4 clipPos = TransformWorldToHClip(WorldPos);\r\n    half4 shadowCoord = ComputeScreenPos(clipPos);\r\n#else\r\n    half4 shadowCoord = TransformWorldToShadowCoord(WorldPos);\r\n#endif\r\n    Light mainLight = GetMainLight(shadowCoord);\r\n    Direction = mainLight.direction;\r\n    Color = mainLight.color;\r\n    DistanceAtten = mainLight.distanceAttenuation;\r\n    ShadowAtten = mainLight.shadowAttenuation;\r\n#endif\r\n}\r\n\r\nvoid AddAdditionalLights_float(float Smoothness, float3 WorldPosition, float3 WorldNormal, float3 WorldView,\r\n    float MainDiffuse, float MainSpecular, float3 MainColor,\r\n    out float Diffuse, out float Specular, out float3 Color) {\r\n    Diffuse = MainDiffuse;\r\n    Specular = MainSpecular;\r\n    Color = MainColor * (MainDiffuse + MainSpecular);\r\n\r\n#ifndef SHADERGRAPH_PREVIEW\r\n    int pixelLightCount = GetAdditionalLightsCount();\r\n    for (int i = 0; i < pixelLightCount; ++i) {\r\n        Light light = GetAdditionalLight(i, WorldPosition);\r\n        half NdotL = saturate(dot(WorldNormal, light.direction));\r\n        half atten = light.distanceAttenuation * light.shadowAttenuation;\r\n        half thisDiffuse = atten * NdotL;\r\n        half thisSpecular = LightingSpecular(thisDiffuse, light.direction, WorldNormal, WorldView, 1, Smoothness);\r\n        Diffuse += thisDiffuse;\r\n        Specular += thisSpecular;\r\n        Color += light.color * (thisDiffuse + thisSpecular);\r\n    }\r\n#endif\r\n\r\n    half total = Diffuse + Specular;\r\n    // If no light touches this pixel, set the color to the main light's color\r\n    Color = total <= 0 ? MainColor : Color / total;\r\n}\r\n\r\n#endif"
 }
