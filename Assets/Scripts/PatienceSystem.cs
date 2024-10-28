@@ -21,6 +21,9 @@ public class PatienceSystem : MonoBehaviour
 
     bool gone;
 
+    public Transform decalno;
+    public Transform decalsi;
+
     private void Start()
     {
         //queue.Add(gameObject);
@@ -43,6 +46,10 @@ public class PatienceSystem : MonoBehaviour
                 if (i == 0)
                 {
                     ticket.SetActive(false);
+                    decalno.transform.parent = null;
+                    decalno.transform.position = new Vector3(99, 99, 99);
+                    decalsi.transform.parent = null;
+                    decalsi.transform.position = new Vector3(99, 99, 99);
                     if (ticket.TryGetComponent<Rigidbody>(out Rigidbody rb))
                     {
                         rb.velocity = Vector3.zero;

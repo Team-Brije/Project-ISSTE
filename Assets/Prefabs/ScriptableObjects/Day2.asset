@@ -23,13 +23,13 @@ MonoBehaviour:
   Hotel3: 0
   Hotel4: 0
   poolSize: 100
-  DayPercentage: 40
-  MonthPercentage: 40
-  YearPercentage: 40
+  DayPercentage: 95
+  MonthPercentage: 95
+  YearPercentage: 95
   dayRange: 5
   monthRange: 2
   yearRange: 5
-  Time: 350
+  Time: 160
   minTime: 45
   maxTime: 60
   blacklist: {fileID: 0}

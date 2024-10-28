@@ -29,7 +29,7 @@ MonoBehaviour:
   dayRange: 5
   monthRange: 2
   yearRange: 5
-  Time: 300
+  Time: 140
   minTime: 45
   maxTime: 60
   blacklist: {fileID: 0}

@@ -107,9 +107,12 @@ public class DataManager : MonoBehaviour
         Hotel3 = dayConfigFile.Hotel3;
         Hotel4 = dayConfigFile.Hotel4;
 
-        if (dayConfigFile.blacklist.NAME_ONLY.Length > 0) Blacklist_Name_Only = dayConfigFile.blacklist.NAME_ONLY;
-        if (dayConfigFile.blacklist.SPECIES_ONLY.Length > 0) Blacklist_Species_Only = dayConfigFile.blacklist.SPECIES_ONLY;
-        if (dayConfigFile.blacklist.NAME_AND_SPECIES.Length > 0) Blacklist_Name_And_Species = dayConfigFile.blacklist.NAME_AND_SPECIES;
+        if (dayConfigFile.hasBlacklist)
+        {
+            if (dayConfigFile.blacklist.NAME_ONLY.Length > 0) Blacklist_Name_Only = dayConfigFile.blacklist.NAME_ONLY;
+            if (dayConfigFile.blacklist.SPECIES_ONLY.Length > 0) Blacklist_Species_Only = dayConfigFile.blacklist.SPECIES_ONLY;
+            if (dayConfigFile.blacklist.NAME_AND_SPECIES.Length > 0) Blacklist_Name_And_Species = dayConfigFile.blacklist.NAME_AND_SPECIES;
+        }
     }
 
 
