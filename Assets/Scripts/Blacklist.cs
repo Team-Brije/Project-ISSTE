@@ -5,16 +5,22 @@ using UnityEngine;
 
 public class Blacklist : MonoBehaviour
 {
-    public DataManager manager;
+    DataManager manager;
     [HideInInspector] public string AlienName, species;
     public bool isAllowedToEnter;
     bool bl1, bl2, bl3;
 
     public TextMeshPro data;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        Invoke(nameof(StartValues), 0.02f);
+        manager = DataManager.Instance;
+        print(manager);
+    }
+    void OnEnable()
+    {
+        
+        Invoke(nameof(StartValues), 0.05f);
     }
 
     public void StartValues()

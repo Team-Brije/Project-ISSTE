@@ -29,9 +29,9 @@ public class DataManager : MonoBehaviour
     [HideInInspector] public bool Hotel3;
     [HideInInspector] public bool Hotel4;
 
-    [HideInInspector] public string[] Blacklist_Name_Only;
-    [HideInInspector] public string[] Blacklist_Species_Only;
-    [HideInInspector] public string[] Blacklist_Name_And_Species;
+    public string[] Blacklist_Name_Only = new string[0];
+    public string[] Blacklist_Species_Only = new string[0];
+    public string[] Blacklist_Name_And_Species = new string[0];
 
 
     public DayConfig dayConfigFile;

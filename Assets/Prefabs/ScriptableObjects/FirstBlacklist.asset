@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NAME_ONLY:
   - Juan
-  - Raul
+  - Pedro
   SPECIES_ONLY:
   - Automaton
   NAME_AND_SPECIES:
-  - Pedro.Salchis
-  - Rigoberto.Human
+  - Rigoberto.Salchis
+  - Luis.Human
