@@ -32,6 +32,7 @@ public class TimeManager : MonoBehaviour
     public PatienceSystem patience;
     //day display
     public TextMeshProUGUI dia;
+
     
 
 
@@ -57,7 +58,7 @@ public class TimeManager : MonoBehaviour
     {
         if (playPressed == true)
         {
-
+            
             timer--;
 
             SetData();
