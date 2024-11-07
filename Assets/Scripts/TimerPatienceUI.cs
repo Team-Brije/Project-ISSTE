@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,10 +9,13 @@ using UnityEngine.UI;
 public class TimerPatienceUI : MonoBehaviour
 {
     public Image _image;
+    public TextMeshProUGUI time;
+    public Animator _animator;
     [SerializeField] private Gradient timerGradient;
     public float count;
     public int id;
     public PatienceSystem timeLeft;
+    public static bool isOnAnimation;
 
     private void Start()
     {
@@ -19,18 +23,16 @@ public class TimerPatienceUI : MonoBehaviour
     }
     private void Update()
     {
-        if (id == 1 && timeLeft.wait.Count != 0)
+        if (timeLeft.wait.Count != 0 && !isOnAnimation)
         {
-            _image.fillAmount = (timeLeft.wait[0] / 1) * (timeLeft.wait[0] - timeLeft.waitSecs);
+            _image.fillAmount = (timeLeft.wait[id-1] / 1) * (timeLeft.wait[id-1] - timeLeft.waitSecs);
+            time.text =(timeLeft.wait[id-1] - timeLeft.waitSecs).ToString();
+            if (timeLeft.wait[id-1] <= timeLeft.waitSecs) 
+            {
+                
+            }
         }
-        if (id == 2 && timeLeft.wait.Count != 0)
-        {
-            _image.fillAmount = (timeLeft.wait[1] / 1) * (timeLeft.wait[0] - timeLeft.waitSecs);
-        }
-        if (id == 3 && timeLeft.wait.Count != 0)
-        {
-            _image.fillAmount = (timeLeft.wait[2]/1)*(timeLeft.wait[0] - timeLeft.waitSecs);
-        }
+        time.color = timerGradient.Evaluate(_image.fillAmount);
         _image.color = timerGradient.Evaluate(_image.fillAmount);
     }
 }
