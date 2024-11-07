@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.01588755, g: 0.0006962223, b: 0.3342, a: 1}
+  m_IndirectSpecularColor: {r: 0.028079148, g: 0.0005584863, b: 0.334061, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4342,6 +4342,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4412197279027427968, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412197279027427968, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1243399312}
@@ -4350,11 +4354,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1478051933}
     - target: {fileID: 4412197279027427968, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1243399312}
+    - target: {fileID: 4412197279027427968, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4412197279027427968, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412197279027427968, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4412197279027427968, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
@@ -4374,11 +4386,19 @@ PrefabInstance:
       value: UnityEngine.Behaviour, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4412197279027427968, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.Behaviour, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412197279027427968, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4412197279027427968, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412197279027427968, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4412197279027427968, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
@@ -4411,7 +4431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5656374512300685866, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -35
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5656374512300685866, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4431,11 +4451,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5656374512300685866, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5656374512300685866, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -159
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5656374512300685866, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5314,7 +5334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Miedo terror ozuna
+  m_text: CUSTOMER PATIENCE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5549,7 +5569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1243399313
 RectTransform:
   m_ObjectHideFlags: 0
