@@ -5,7 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public void play(){
+    public void SwitchPanel(GameObject gamin)
+    {
+        gameObject.SetActive(false);
+        gamin.SetActive(true); 
+    }
+    public void play(int lvl){
+        TimeManager.Day = lvl;
         SceneManager.LoadScene("Level");
     }
 }
