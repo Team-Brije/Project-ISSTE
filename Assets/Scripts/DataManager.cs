@@ -29,10 +29,11 @@ public class DataManager : MonoBehaviour
     [HideInInspector] public bool Hotel3;
     [HideInInspector] public bool Hotel4;
 
-    public string[] Blacklist_Name_Only = new string[0];
-    public string[] Blacklist_Species_Only = new string[0];
-    public string[] Blacklist_Name_And_Species = new string[0];
+    [HideInInspector] public string[] Blacklist_Name_Only = new string[0];
+    [HideInInspector] public string[] Blacklist_Species_Only = new string[0];
+    [HideInInspector] public string[] Blacklist_Name_And_Species = new string[0];
 
+    [HideInInspector] public AudioClip voiceline;
 
     public DayConfig dayConfigFile;
 
@@ -113,6 +114,8 @@ public class DataManager : MonoBehaviour
             if (dayConfigFile.blacklist.SPECIES_ONLY.Length > 0) Blacklist_Species_Only = dayConfigFile.blacklist.SPECIES_ONLY;
             if (dayConfigFile.blacklist.NAME_AND_SPECIES.Length > 0) Blacklist_Name_And_Species = dayConfigFile.blacklist.NAME_AND_SPECIES;
         }
+
+        voiceline = dayConfigFile.voiceline;
     }
 
 

@@ -41,4 +41,7 @@ public class DayConfig : ScriptableObject
 
     [Header("Blacklist Scriptable Object")]
     public BlacklistVariables blacklist;
+
+    [Header("Audio at Start")]
+    public AudioClip voiceline;
 }
