@@ -12,6 +12,10 @@ public class controlTriggerButon : MonoBehaviour
             {
                 anim.SetTrigger("Push");
             }
+            if(other.TryGetComponent<AudioInterrupter>(out AudioInterrupter audioInterrupter))
+            {
+                audioInterrupter.StopAudio();
+            }
         }
     }
 }
