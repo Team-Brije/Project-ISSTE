@@ -33,4 +33,4 @@ MonoBehaviour:
   minTime: 45
   maxTime: 60
   blacklist: {fileID: 0}
-  voiceline: {fileID: 8300000, guid: d00e9b3d4f985e84a873fd654d0baaca, type: 3}
+  voiceline: {fileID: 8300000, guid: 40e7788352d36304da64b0c5171dd303, type: 3}
