@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
     public int lives = 3;
     public int score = 0;
 
+    [Header("End Anim")]
+    public GameObject Light;
+    public Animator Hatch;
+
 
     public static GameManager Instance
     {
@@ -74,10 +78,10 @@ public class GameManager : MonoBehaviour
     public void BadCheck()
     {
         lives--;
-        if (lives == 0)
+        if (lives <= 0)
         {
-            SceneManager.LoadScene("BLACK");
-            Debug.Log("Game Over");
+            //SceneManager.LoadScene("BLACK");
+            EndAnimSequence.gameOverSeq = true;
         }
     }
 
