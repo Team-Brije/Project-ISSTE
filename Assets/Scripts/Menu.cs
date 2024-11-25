@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public GameObject panel;
     public void SwitchPanel(GameObject gamin)
     {
-        gameObject.SetActive(false);
+        panel.SetActive(false);
         gamin.SetActive(true); 
     }
     public void play(int lvl){
