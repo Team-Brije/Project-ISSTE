@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.99999905, g: 0, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.015832547, g: 0.0006591409, b: 0.33415845, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5446,9 +5446,6 @@ PrefabInstance:
       addedObject: {fileID: 1478051937}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5ed9afc0c2e43a34c9888d00c26fbf4f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1478051940}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5ed9afc0c2e43a34c9888d00c26fbf4f, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1478051938}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5ed9afc0c2e43a34c9888d00c26fbf4f, type: 3}
       insertIndex: -1
@@ -5878,6 +5875,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1268890386 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 2104760200}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1274189438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7333,20 +7335,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1478051940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478051931}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d8b67f17a972e44931795cbf631ca7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 375048242}
-  clip: {fileID: 8300000, guid: 40e7788352d36304da64b0c5171dd303, type: 3}
 --- !u!1 &1487412474
 GameObject:
   m_ObjectHideFlags: 0
@@ -8874,6 +8862,10 @@ PrefabInstance:
       propertyPath: Hatch
       value: 
       objectReference: {fileID: 2126004751}
+    - target: {fileID: 3160722109309052987, guid: d4f046cfae3611c46adc206d8a57fc13, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1268890386}
     - target: {fileID: 3160722109309052987, guid: d4f046cfae3611c46adc206d8a57fc13, type: 3}
       propertyPath: spawnerxd
       value: 
