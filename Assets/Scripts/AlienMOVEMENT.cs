@@ -17,8 +17,9 @@ public class AlienMOVEMENT : MonoBehaviour
    
 
 
-    void Start()
+    void OnEnable()
     {
+        canMove = true;
         boothObj = GameObject.Find("SpawnLeft");
         newPosition = boothObj.transform.position;
         Alien = transform.position;
