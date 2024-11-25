@@ -7,6 +7,7 @@ public class EndAnimSequence : MonoBehaviour
     public GameObject SpotLight;
     public Animator Hatch;
     public static bool gameOverSeq = false;
+    public GameObject spawnerxd;
     void Awake()
     {
         SpotLight.SetActive(false);
@@ -24,5 +25,11 @@ public class EndAnimSequence : MonoBehaviour
         SpotLight.SetActive(true);
         yield return new WaitForSeconds(2);
         Hatch.SetTrigger("Hatch");
+        spawnerxd.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        gameOverSeq = false;
     }
 }

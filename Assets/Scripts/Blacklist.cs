@@ -15,7 +15,6 @@ public class Blacklist : MonoBehaviour
     private void Awake()
     {
         manager = DataManager.Instance;
-        print(manager);
     }
     void OnEnable()
     {

@@ -26,7 +26,6 @@ public class TimerPatienceUI : MonoBehaviour
         if (timeLeft.wait.Count != 0 && !isOnAnimation)
         {
             _image.fillAmount = (1/timeLeft.wait[id-1]) * (timeLeft.wait[id-1] - timeLeft.waitSecs);
-            Debug.Log(1/(timeLeft.wait[id-1]) * (timeLeft.wait[id-1] - timeLeft.waitSecs));
             time.text =(timeLeft.wait[id-1] - timeLeft.waitSecs).ToString("F0");
             if (timeLeft.wait[id-1] <= timeLeft.waitSecs) 
             {

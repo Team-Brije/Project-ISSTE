@@ -72,7 +72,6 @@ public class QueueSysem : MonoBehaviour
     {
         gameObject.transform.position = new Vector3 (initialpos.position.x,2,initialpos.position.z);
         yield return new WaitForSeconds(0.4f);
-        Debug.Log("Gaming");
         gameObject.transform.position = new Vector3(initialpos.position.x, 0, initialpos.position.z);
     }
 

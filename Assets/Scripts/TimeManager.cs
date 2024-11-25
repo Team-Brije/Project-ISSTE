@@ -50,7 +50,8 @@ public class TimeManager : MonoBehaviour
         Invoke(nameof(SetData), 0.1f);
         
         gameManager = FindAnyObjectByType<GameManager>();
-
+        playPressed = false;
+        PatienceSystem.start = false;
 
     }
 
