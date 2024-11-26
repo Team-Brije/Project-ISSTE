@@ -15,24 +15,27 @@ public class TimerPatienceUI : MonoBehaviour
     public float count;
     public int id;
     public PatienceSystem timeLeft;
-    public static bool isOnAnimation;
+    public float initTime;
 
     private void Start()
     {
         _image = GetComponent<Image>();
+        GetTime();
     }
     private void Update()
     {
-        if (timeLeft.wait.Count != 0 && !isOnAnimation)
+        if (timeLeft.wait.Count != 0)
         {
-            _image.fillAmount = (1/timeLeft.wait[id-1]) * (timeLeft.wait[id-1] - timeLeft.waitSecs);
-            time.text =(timeLeft.wait[id-1] - timeLeft.waitSecs).ToString("F0");
-            if (timeLeft.wait[id-1] <= timeLeft.waitSecs) 
-            {
-                
-            }
+            _image.fillAmount = (1/initTime) * (timeLeft.wait[id - 1] - timeLeft.waitSecs);
+            time.text =(timeLeft.wait[id - 1] - timeLeft.waitSecs).ToString("F0");
         }
+        if ((timeLeft.wait[id - 1] - timeLeft.waitSecs) <= 0) GetTime();
         time.color = timerGradient.Evaluate(_image.fillAmount);
         _image.color = timerGradient.Evaluate(_image.fillAmount);
+    }
+
+    private void GetTime()
+    {
+        initTime = timeLeft.wait[id - 1] - timeLeft.waitSecs;
     }
 }
