@@ -12,9 +12,10 @@ public class TimerPatienceUI : MonoBehaviour
     public TextMeshProUGUI time;
     public Animator _animator;
     [SerializeField] private Gradient timerGradient;
-    public float count;
+    private float count;
     public int id;
     public PatienceSystem timeLeft;
+    public TimerPatienceUI timer1, timer2, timer3;
     public float initTime;
 
     private void Start()
@@ -29,7 +30,10 @@ public class TimerPatienceUI : MonoBehaviour
             _image.fillAmount = (1/initTime) * (timeLeft.wait[id - 1] - timeLeft.waitSecs);
             time.text =(timeLeft.wait[id - 1] - timeLeft.waitSecs).ToString("F0");
         }
-        if ((timeLeft.wait[id - 1] - timeLeft.waitSecs) <= 0) GetTime();
+        if ((timeLeft.wait[id - 1] - timeLeft.waitSecs) <= 0) 
+        { 
+            GetTime(); 
+        }
         time.color = timerGradient.Evaluate(_image.fillAmount);
         _image.color = timerGradient.Evaluate(_image.fillAmount);
     }
@@ -37,5 +41,12 @@ public class TimerPatienceUI : MonoBehaviour
     private void GetTime()
     {
         initTime = timeLeft.wait[id - 1] - timeLeft.waitSecs;
+    }
+
+    public void PassTime()
+    {
+        if(id == 1) initTime = timer2.initTime;
+        else if(id == 2) initTime = timer3.initTime;
+        else if (id == 3) GetTime();
     }
 }

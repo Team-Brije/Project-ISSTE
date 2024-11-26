@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.015832547, g: 0.0006591409, b: 0.33415845, a: 1}
+  m_IndirectSpecularColor: {r: 0.01588755, g: 0.0006962223, b: 0.3342, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4309,9 +4309,12 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 5
     m_NumAlphaKeys: 2
-  count: 0
   id: 1
   timeLeft: {fileID: 1371179234}
+  timer1: {fileID: 887345739}
+  timer2: {fileID: 1487412474}
+  timer3: {fileID: 1931324062}
+  initTime: 0
 --- !u!1 &896181186 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8880973332414876854, guid: 7de837deecc9f00499832964c01e8d22, type: 3}
@@ -7457,9 +7460,12 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 5
     m_NumAlphaKeys: 2
-  count: 0
   id: 2
   timeLeft: {fileID: 1371179234}
+  timer1: {fileID: 887345739}
+  timer2: {fileID: 1487412474}
+  timer3: {fileID: 1931324062}
+  initTime: 0
 --- !u!1 &1497416423
 GameObject:
   m_ObjectHideFlags: 0
@@ -9672,9 +9678,12 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 5
     m_NumAlphaKeys: 2
-  count: 0
   id: 3
   timeLeft: {fileID: 1371179234}
+  timer1: {fileID: 887345743}
+  timer2: {fileID: 1487412478}
+  timer3: {fileID: 1931324066}
+  initTime: 0
 --- !u!1001 &1942350554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9897,6 +9906,9 @@ MonoBehaviour:
   decalsi: {fileID: 1418011653}
   botonCorrect: {fileID: 1238585366}
   patienceSystem: {fileID: 1371179234}
+  ui1: {fileID: 887345743}
+  ui2: {fileID: 1487412478}
+  ui3: {fileID: 1931324066}
   Reservation: {fileID: 326942092}
   ID: {fileID: 1391217169}
   animator: {fileID: 772327496}

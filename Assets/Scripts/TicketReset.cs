@@ -14,6 +14,7 @@ public class TicketReset : MonoBehaviour
 
     public GameObject botonCorrect;
     public PatienceSystem patienceSystem;
+    public TimerPatienceUI ui1, ui2, ui3;
 
     public GameObject Reservation, ID;
     Collider boxCollider;
@@ -42,6 +43,9 @@ public class TicketReset : MonoBehaviour
             patienceSystem.wait[0] += 15;
             PatienceSystem.waitTime = UnityEngine.Random.Range(PatienceSystem.minWait, PatienceSystem.maxWait);
             patienceSystem.wait.Add(PatienceSystem.waitTime + patienceSystem.waitSecs);
+            ui1.PassTime();
+            ui2.PassTime();
+            ui3.PassTime();
             queue.Lift();
             boxCollider.enabled = false;
             //this.gameObject.SetActive(false);
