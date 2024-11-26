@@ -32,6 +32,7 @@ public class TimeManager : MonoBehaviour
     public PatienceSystem patience;
     //day display
     public TextMeshProUGUI dia;
+    public GameObject canvaapagrxd;
 
     
 
@@ -41,9 +42,11 @@ public class TimeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.lives = 3;
+        Debug.Log("xd");
         ticket = GameObject.FindGameObjectWithTag("Ticket");
         //Temporizador.text = timer.ToString();
-        Debug.Log(begTime);
+
         TimerCountdown();
         DaySelector();
 
@@ -83,7 +86,7 @@ public class TimeManager : MonoBehaviour
                 spwnAlns.SetActive(false);
                 Day++;
                 AlienMOVEMENT.canMove = true;
-                
+                canvaapagrxd.SetActive(false);
                 //SceneManager.LoadScene("Timer");
 
             }
@@ -99,7 +102,7 @@ public class TimeManager : MonoBehaviour
     {
         //Invoke(nameof(TimerCountdown), 0);
         boton.SetActive(false);
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void Play()

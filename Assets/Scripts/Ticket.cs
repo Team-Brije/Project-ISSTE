@@ -143,12 +143,12 @@ public class Ticket : MonoBehaviour
 
         if (day == manager.day && month == manager.month && year == manager.year)
         {
-            Debug.Log("This Ticket would be correct");
+            //Debug.Log("This Ticket would be correct");
             isTicketCorrrect = true;
         }
         else
         {
-            Debug.Log("This Ticket would be incorrect");
+            //Debug.Log("This Ticket would be incorrect");
             isTicketCorrrect = false;
         }
     }

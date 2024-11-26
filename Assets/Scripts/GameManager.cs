@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
 
-    public int lives = 3;
+    public static int lives = 3;
     public int score = 0;
 
     [Header("End Anim")]
@@ -42,29 +42,28 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
-        Debug.Log("arribadelobeserver");
         TicketReset.OnInteract += HandleTicket;
     }
 
 
     void HandleTicket(bool isTicketCorrect, bool isApprovedStamp, bool hasBeenChecked)
     {
-        Debug.Log(isTicketCorrect + " " + isApprovedStamp + " " + hasBeenChecked);
+        //Debug.Log(isTicketCorrect + " " + isApprovedStamp + " " + hasBeenChecked);
         if(!hasBeenChecked)
         {
             return;
         }
         if (isTicketCorrect && isApprovedStamp)
         {
-            Debug.Log("GOOD :)");
+            //Debug.Log("GOOD :)");
             GoodCheck();
 
         } else if (!isTicketCorrect && !isApprovedStamp)
         {
-            Debug.Log("GOOD 2 :)");
+            //Debug.Log("GOOD 2 :)");
             GoodCheck();
         } else {
-            Debug.Log("BAD :(");
+            //Debug.Log("BAD :(");
             BadCheck();
 
         }
@@ -78,11 +77,16 @@ public class GameManager : MonoBehaviour
     public void BadCheck()
     {
         lives--;
+        Debug.Log("vidas desde manager "+lives);
+        Debug.Log("if de aqui xd" + (lives <= 0));
         if (lives <= 0)
         {
             //SceneManager.LoadScene("BLACK");
             EndAnimSequence.gameOverSeq = true;
         }
     }
-
+    private void OnDestroy()
+    {
+        TicketReset.OnInteract -= HandleTicket;
+    }
 }

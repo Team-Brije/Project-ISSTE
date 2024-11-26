@@ -29,8 +29,8 @@ MonoBehaviour:
   dayRange: 5
   monthRange: 2
   yearRange: 5
-  Time: 160
+  Time: 120
   minTime: 45
-  maxTime: 60
+  maxTime: 50
   blacklist: {fileID: 0}
   voiceline: {fileID: 8300000, guid: 5949d70e59f03d3479705815b7ccbf47, type: 3}

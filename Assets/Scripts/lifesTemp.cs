@@ -7,6 +7,6 @@ public class lifesTemp : MonoBehaviour
 {
     void Update()
     {
-        gameObject.GetComponent<TextMeshProUGUI>().text = GameManager.Instance.lives.ToString();
+        gameObject.GetComponent<TextMeshProUGUI>().text = GameManager.lives.ToString();
     }
 }

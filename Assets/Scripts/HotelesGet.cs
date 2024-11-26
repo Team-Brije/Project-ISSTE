@@ -12,14 +12,14 @@ public class HotelesGet : MonoBehaviour
     {
         if (managerTime.CurDay.hasReservation)
         {
-            if (managerTime.CurDay.Hotel1) { currentText.text += "<br>Hotel 1 Avialiable"; }
-            if (managerTime.CurDay.Hotel2) { currentText.text += "<br>Hotel 2 Avialiable"; }
-            if (managerTime.CurDay.Hotel3) { currentText.text += "<br>Hotel 3 Avialiable"; }
-            if (managerTime.CurDay.Hotel4) { currentText.text += "<br>Hotel 4 Avialiable"; }            
+            if (managerTime.CurDay.Hotel1) { currentText.text += "Open<br>"; } else { currentText.text += "Closed<br>"; }
+            if (managerTime.CurDay.Hotel2) { currentText.text += "Open<br>"; } else { currentText.text += "Closed<br>"; }
+            if (managerTime.CurDay.Hotel3) { currentText.text += "Open<br>"; } else { currentText.text += "Closed<br>"; }
+            if (managerTime.CurDay.Hotel4) { currentText.text += "Open"; } else { currentText.text += "Closed"; }
         }
         else
             {
-                currentText.text += "<br>No Hotels Today";
+                currentText.text += "Closed<br>Closed<br>Closed<br>Closed";
             }
     }
 

@@ -15,7 +15,6 @@ public class AlienPositionReset : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other);
         other.gameObject.transform.position = resetPoint.position;
         other.gameObject.GetComponent<AlienGeneration>().aliendespawn();
         other.gameObject.GetComponent<AlienGeneration>().alienRandomize();

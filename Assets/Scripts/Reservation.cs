@@ -165,10 +165,10 @@ public class Reservation : MonoBehaviour
         dayText.text = day.ToString();
         monthText.text = month.ToString();
         yearText.text = year.ToString();
-        if (hotels == Hotels.Hotel1) { hotelText.text = "HOTEL 1"; }
-        if (hotels == Hotels.Hotel2) { hotelText.text = "HOTEL 2"; }
-        if (hotels == Hotels.Hotel3) { hotelText.text = "HOTEL 3"; }
-        if (hotels == Hotels.Hotel4) { hotelText.text = "HOTEL 4"; }
+        if (hotels == Hotels.Hotel1) { hotelText.text = "Tacubaya Inn"; }
+        if (hotels == Hotels.Hotel2) { hotelText.text = "Holiday Tlalpan"; }
+        if (hotels == Hotels.Hotel3) { hotelText.text = "S.C de las Casas"; }
+        if (hotels == Hotels.Hotel4) { hotelText.text = "Nezayork Deluxe"; }
     }
 
     public IEnumerator resetRigi()

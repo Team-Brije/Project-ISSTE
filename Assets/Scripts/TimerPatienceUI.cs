@@ -27,13 +27,13 @@ public class TimerPatienceUI : MonoBehaviour
     {
         if (timeLeft.wait.Count != 0)
         {
-            _image.fillAmount = (1/initTime) * (timeLeft.wait[id - 1] - timeLeft.waitSecs);
+            _image.fillAmount = (1/ timeLeft.wait[id - 1]) * (timeLeft.wait[id - 1] - timeLeft.waitSecs);
             time.text =(timeLeft.wait[id - 1] - timeLeft.waitSecs).ToString("F0");
         }
-        if ((timeLeft.wait[id - 1] - timeLeft.waitSecs) <= 0) 
+        /*if ((timeLeft.wait[id - 1] - timeLeft.waitSecs) <= 0) 
         { 
             GetTime(); 
-        }
+        }*/
         time.color = timerGradient.Evaluate(_image.fillAmount);
         _image.color = timerGradient.Evaluate(_image.fillAmount);
     }

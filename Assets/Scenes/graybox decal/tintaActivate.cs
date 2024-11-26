@@ -8,8 +8,6 @@ public class tintaActivate : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent(out raycastStamp stamp))
         {
-            Debug.Log("uwu");
-            Debug.Log(other);
             stamp.tieneTinta = true;
         }
     }

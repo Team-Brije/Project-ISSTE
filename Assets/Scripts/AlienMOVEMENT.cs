@@ -24,16 +24,13 @@ public class AlienMOVEMENT : MonoBehaviour
         newPosition = boothObj.transform.position;
         Alien = transform.position;
         rb = GetComponent<Rigidbody>();
-        Debug.Log("alienStart");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log("se puede mover " + canMove);
         if (canMove)
         {
-            Debug.Log("moviendo");
             time += Time.deltaTime;
             float percentage = time / duration;
             Vector3 newPosition = rb.position + Vector3.left * speed * Time.fixedDeltaTime;

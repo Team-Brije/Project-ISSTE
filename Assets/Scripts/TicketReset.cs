@@ -43,9 +43,6 @@ public class TicketReset : MonoBehaviour
             patienceSystem.wait[0] += 15;
             PatienceSystem.waitTime = UnityEngine.Random.Range(PatienceSystem.minWait, PatienceSystem.maxWait);
             patienceSystem.wait.Add(PatienceSystem.waitTime + patienceSystem.waitSecs);
-            ui1.PassTime();
-            ui2.PassTime();
-            ui3.PassTime();
             queue.Lift();
             boxCollider.enabled = false;
             //this.gameObject.SetActive(false);

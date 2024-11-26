@@ -16,6 +16,10 @@ public class EndAnimSequence : MonoBehaviour
         SpotLight.SetActive(false);
         gameOverSeq = false;
     }
+    private void Start()
+    {
+        gameOverSeq = false;
+    }
     private void Update() {
         if(gameOverSeq==true){
             gameOver();
