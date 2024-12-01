@@ -43,7 +43,6 @@ public class TimeManager : MonoBehaviour
     void Start()
     {
         GameManager.lives = 3;
-        Debug.Log("xd");
         ticket = GameObject.FindGameObjectWithTag("Ticket");
         //Temporizador.text = timer.ToString();
 
