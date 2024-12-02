@@ -6,7 +6,7 @@ public class AudioInterrupter : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioClip clip;
-
+    public musicaTimeOut timeoutxd;
     bool hasPlayed;
 
     public void Start()
@@ -22,6 +22,14 @@ public class AudioInterrupter : MonoBehaviour
             audioSource.Stop();
             audioSource.clip = clip; 
             audioSource.Play();
+        }
+    }
+
+    public void startMusic()
+    {
+        if (timeoutxd.enabled)
+        {
+            timeoutxd.PlaySong();
         }
     }
 }

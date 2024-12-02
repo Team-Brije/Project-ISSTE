@@ -8,8 +8,9 @@ public class playertpMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerxd.transform.position = new Vector3(0.18f, -0.88f, 4.29f);
-        playerxd.transform.rotation = new Quaternion(0, 163.7f, 0, 0);
+        Debug.Log("adsadasd");
+        playerxd.transform.localPosition = new Vector3(0.09f, -0.24f, -0.006f);
+        playerxd.transform.localEulerAngles = new Vector3(0, 42.27f, 0);
 
     }
 

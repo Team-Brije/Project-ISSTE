@@ -22,11 +22,12 @@ public class musicaTimeOut : MonoBehaviour
     public void PlaySong()
     {
         mikumbia.Play();
+        this.gameObject.GetComponent<changeMusic>().enabled = true;
         this.enabled = false;
     }
 
-    public IEnumerator musicaTimeOutxd(){
+    /*public IEnumerator musicaTimeOutxd(){
         yield return new WaitForSeconds(33);
         mikumbia.Play();
-    }
+    }*/
 }
