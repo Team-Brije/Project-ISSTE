@@ -5,9 +5,24 @@ using UnityEngine;
 public class musicaTimeOut : MonoBehaviour
 {
     public AudioSource mikumbia;
+    public AudioSource Voice;
     void Start()
     {
-        StartCoroutine(musicaTimeOutxd());
+        //StartCoroutine(musicaTimeOutxd());
+    }
+
+    private void Update()
+    {
+        if (Voice.isPlaying == false)
+        {
+            PlaySong();
+        }
+    }
+
+    public void PlaySong()
+    {
+        mikumbia.Play();
+        this.enabled = false;
     }
 
     public IEnumerator musicaTimeOutxd(){

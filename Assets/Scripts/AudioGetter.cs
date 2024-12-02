@@ -6,7 +6,7 @@ public class AudioGetter : MonoBehaviour
 {
     AudioSource audiosource;
     DataManager manager;
-
+    public musicaTimeOut Music;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +19,6 @@ public class AudioGetter : MonoBehaviour
     {
         audiosource.clip = manager.voiceline;
         audiosource.Play();
+        Music.enabled = true;
     }
 }
